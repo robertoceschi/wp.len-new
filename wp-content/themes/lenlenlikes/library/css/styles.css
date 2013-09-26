@@ -463,7 +463,7 @@ nav[role="navigation"] {
 /* line 114, ../sass/partials/_layout.scss */
 #footer {
   clear: left;
-  background: rgba(25, 25, 25, 0.8);
+  background: white;
   text-align: center;
   padding: 10px;
   color: black;
