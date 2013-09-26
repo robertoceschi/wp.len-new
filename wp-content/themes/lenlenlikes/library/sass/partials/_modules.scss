@@ -479,33 +479,68 @@ body.active {
   }
 }
 
-
 div.overlay {
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background: rgba(25, 25, 25, 0.8);
-opacity: 0;
--ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-filter: alpha(opacity=0);
--webkit-transition: opacity 0.2s linear;
--moz-transition: opacity 0.2s linear;
--o-transition: opacity 0.2s linear;
-transition: opacity 0.2s linear;
--webkit-backface-visibility: hidden;
-  header.entry-header {
-    position: relative;
-    padding: 10px 10px 22px;
-    background: none;
-    display: block;
+  position: relative;
+  @include at-breakpoint($L) {
+    position: absolute;
     top: 0;
     left: 0;
-    h2.entry-title {
+    right: 0;
+    bottom: 0;
+    background: rgba(25, 25, 25, 0.8);
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    -webkit-transition: opacity 0.2s linear;
+    -moz-transition: opacity 0.2s linear;
+    -o-transition: opacity 0.2s linear;
+    transition: opacity 0.2s linear;
+    -webkit-backface-visibility: hidden;
+    &:hover {
+      opacity: 1;
+      filter: alpha(opacity=100);
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+  }
+}
+
+div.overlay {
+  header.entry-header {
+    position: absolute;
+    top: 10px;
+    left: 3%;
+    padding: 1px 3% 6px;
+    background: rgba(255, 255, 255, 0.7);
+    display: inline-block;
+    max-width: 88%;
+    @include at-breakpoint($L) {
+      position: relative;
+      padding: 10px 10px 22px;
+      background: none;
+      display: block;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  h2.entry-title {
+    a {
+      color: $color10;
+      font-family: "jubilat";
+      font-weight: normal;
+      line-height: 1.4;
+      font-size: 0.8em;
+      word-wrap: break-word;
+      letter-spacing: 1px;
+      &:hover {
+        color: $color13
+      }
+    }
+    @include at-breakpoint($L) {
       a {
         color: $color11;
         font-family: "jubilat";
+        font-size: 1em;
         font-weight: normal;
         line-height: 1.4;
         word-wrap: break-word;
@@ -515,8 +550,14 @@ transition: opacity 0.2s linear;
         }
       }
     }
+  }
     span.entry-meta {
       a {
+        display: none;
+      }
+      @include at-breakpoint($L) {
+      a {
+        display: inline;
         color: $color14;
         font-size: 0.8rem;
         &:hover {
@@ -524,8 +565,11 @@ transition: opacity 0.2s linear;
         }
       }
     }
+    }
     a.icon-eye {
-      margin-top:15px;
+      display: none;
+      @include at-breakpoint($L) {
+      margin-top: 15px;
       color: $color14;
       display: block;
       opacity: 0.6;
@@ -536,14 +580,10 @@ transition: opacity 0.2s linear;
         color: $color11;
       }
     }
-  }
-  &:hover {
-    opacity: 1;
-    filter: alpha(opacity=100);
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-  }
+}
 
 }
+
 div.thumb-wrap {
   line-height: 0;
 
