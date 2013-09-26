@@ -569,7 +569,6 @@ div.overlay {
     a.icon-eye {
       display: none;
       @include at-breakpoint($L) {
-      margin-top: 15px;
       color: $color14;
       display: block;
       opacity: 0.6;

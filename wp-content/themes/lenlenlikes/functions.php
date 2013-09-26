@@ -189,3 +189,4 @@ function SearchFilter($query) {
     return $query;
 }
 add_filter('pre_get_posts','SearchFilter');
+
