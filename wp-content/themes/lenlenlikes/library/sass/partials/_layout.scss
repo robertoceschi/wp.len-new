@@ -1,0 +1,127 @@
+// ====================================================================
+// Layout styles, should only contain rules relating to the structure
+// ====================================================================
+// Grid layout variables (http://susy.oddbird.net/)
+// ====================================================================
+@import "susy";
+@import "compass/css3";
+
+$total-columns: 12;
+// a 12-column grid
+$column-width: 5em;
+// each column is 5em wide
+$gutter-width: 1em;
+// 1em Gutter between columns
+$grid-padding: 0;
+//no padding
+
+$container-style: fluid;
+
+$border-box-sizing: true;
+// If you weren't setting border-box as the box-sizing elsewhere, you could uncomment the following mixin and remove the variable above:
+// @include border-box-sizing;
+
+//Switch off support for legacy Internet Explorer
+$legacy-support-for-ie: false;
+$legacy-support-for-ie6: $legacy-support-for-ie;
+$legacy-support-for-ie7: $legacy-support-for-ie;
+
+
+// Breakpoint variables
+// ====================================================================
+$XS: 18em;
+// roughly speaking, around 288px wide with 16px body font
+$S: 35em;
+// roughly speaking, around 370px wide with 16px body font
+$M: 47em;
+// roughly speaking, around 750px wide with 16px body font (tablets portrait)
+$L: 80em;
+// roughly speaking, around 1200px wide with 16px body font (tablets landscape) (smaller laptops)
+$XL: 90em;
+// roughly speaking, around 1400px wide with 16px body font (standard laptops)
+$XXL: 100em;
+// Minimum width of 1800 pixels (bigger desktop screens)
+
+
+  .fluid-container {
+    @include container;
+  }
+
+  * {
+    @include border-box-sizing;
+  }
+
+  [class^="inner"] {
+    @include container;
+
+    overflow: hidden;
+  }
+
+  .inner-content {
+    //padding-top: 4em;
+  }
+  nav[role="navigation"] {
+    //Hide OffCanvas Section till body is loaded
+    display: none;
+    @extend %single-transition;
+
+    // Accessibility layout - shows when no JavaScript
+    @include span-columns(12, 12);
+
+    // If JavaScript present, hide this section 'off-canvas'
+    .js & {
+      margin-left: -100%;
+      @include span-columns(5, 12);
+      float: left;
+      z-index: 2;
+    }
+    // If button in the 'off-canvas-navigation' area is clicked, 'active' class is applied to the body so the following styles are applied
+    .active & {
+      margin-left: 0;
+
+      @include span-columns(10, 12);
+      margin-right: 0;
+    }
+
+
+  }
+
+  .main-content {
+    //@include susy-grid-background;
+
+    @extend %single-transition;
+    // Accessibility layout - shows when no JavaScript
+    @include span-columns(12, 12);
+
+    // If JavaScript present, apply these rules:
+    .js & {
+      margin-left: 0;
+      float: left;
+      z-index: 1;
+    }
+    // If button in the 'off-canvas-navigation' area is clicked, 'active' class is applied to the body so the following styles are applied
+    .active & {
+      margin-right: -100%;
+    }
+
+  }
+
+
+
+
+
+
+#footer {
+  clear:left;
+  //border-top: 1px solid $color13;
+  background:rgba(25, 25, 25, 0.8);
+  text-align:center;
+  padding:10px;
+  color: black;
+}
+
+
+
+
+
+

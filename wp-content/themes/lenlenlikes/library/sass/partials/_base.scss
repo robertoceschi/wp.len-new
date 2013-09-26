@@ -1,0 +1,32 @@
+// ====================================================================
+// The base styles for the project
+// ====================================================================
+
+
+
+body {
+  font-size: 1em;
+  line-height: 1.4;
+  background-color: $color11;
+  font-family: $body_font;
+
+  .no-fontface & {
+	font-size: 1.05em;
+  }
+}
+ul,li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: $color-link;
+}
+::-moz-selection {
+  background: $color13;
+  text-shadow: none;
+}
+::selection {
+  background: $color13;
+  text-shadow: none;
+}
