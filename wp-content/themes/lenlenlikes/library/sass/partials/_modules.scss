@@ -412,13 +412,15 @@ body.active {
     @include at-breakpoint($L) {
       display: block;
       border-bottom: none;
-      margin-top:60px;
+      margin-top: 80px;
     }
   }
   p {
     color: #fff;
     font-style: italic;
+    font-family: "jubilat";
     margin-bottom: -2px;
+    line-height: 1em;
   }
 }
 
