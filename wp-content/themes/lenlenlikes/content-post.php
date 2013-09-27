@@ -11,11 +11,11 @@ get_header(); ?>
 
 $content_post = get_post($my_postid);
 $content = $content_post->post_content;
-if (strpos($content,'orbit') !== false) {
-    echo 'no slideshow';
+if (strpos($content,'orbit') === true) {
+    echo 'slideshow';
 
 }elseif (strpos($content,'orbit') === false) {
- echo 'slideshow';
+ echo 'no slideshow';
 }
 
 
