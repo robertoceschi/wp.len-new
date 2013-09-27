@@ -20,6 +20,10 @@ jQuery(window).resize(function () {
 });
 jQuery(document).ready(function ($) {
 
+
+   var slideshow = jQuery('.slideshow-wrapper');
+
+
     // "smooth" Link to the posts on Frontpage
     jQuery('a[href="#go_posts"]').on('click', function (e) {
         e.preventDefault();

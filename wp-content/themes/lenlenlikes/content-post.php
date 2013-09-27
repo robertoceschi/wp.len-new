@@ -1,3 +1,6 @@
+
+
+
 <?php
 /**
  * The Template for displaying all single posts.
@@ -8,7 +11,7 @@
 
 get_header(); ?>
 <?php
-
+/*
 $content_post = get_post($my_postid);
 $content = $content_post->post_content;
 if (strpos($content,'orbit') === true) {
@@ -17,7 +20,7 @@ if (strpos($content,'orbit') === true) {
 }elseif (strpos($content,'orbit') === false) {
  echo 'no slideshow';
 }
-
+*/
 
 
 
@@ -84,6 +87,10 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
 <?php endwhile; else: ?>
     // no posts found
 <?php endif; ?>
+
+
+
+
 
 
 <?php get_footer(); ?>
