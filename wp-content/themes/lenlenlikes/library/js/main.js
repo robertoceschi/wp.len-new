@@ -20,8 +20,16 @@ jQuery(window).resize(function () {
 });
 jQuery(document).ready(function ($) {
 
+    var slideshowWrapper = (jQuery('.slideshow-wrapper'));
 
-   var slideshow = jQuery('.slideshow-wrapper');
+    //checkt ob Slideshow (.slideshow-wrapper) in single-post vorhanden ist, wenn ja wird featured-image versteckt
+    var name = 'slideshow-wrapper';
+    if (jQuery("." + name).length != 0) {
+        jQuery('.image_text a img').css('display', 'none');
+    }
+
+    //falls Slideshow vorhanden wird direkt vor den single-post text gestellt
+    slideshowWrapper.prependTo('.entry-content');
 
 
     // "smooth" Link to the posts on Frontpage
