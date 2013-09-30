@@ -435,7 +435,12 @@ body.active {
 #site-content {
   min-height: 700px;
   width: auto;
-  margin: 3% auto;
+  @include at-breakpoint($L) {
+    //width: 1440px!important;
+    margin: 2%;
+    margin-left: 1.8%;
+  }
+
   article {
   }
   a {
@@ -446,15 +451,15 @@ body.active {
 
 .item {
   width: 300px;
-  //mobile first passt so! Do-Abend 19.9.2013
-  //width: 100%;
   @include at-breakpoint($L) {
+    width: 340px;
+    margin-top: 20px;
 
   }
   display: block;
   float: left;
   height: auto;
-  margin: 0 20px 20px 0;
+  margin-top: 20px;
   -webkit-transition: left .4s ease-in-out, top .4s ease-in-out .4s;
   -moz-transition: left .4s ease-in-out, top .4s ease-in-out .4s;
   -ms-transition: left .4s ease-in-out, top .4s ease-in-out .4s;
@@ -464,16 +469,12 @@ body.active {
 }
 
 .item img {
-  //mobile first passt so! Do-Abend 19.9.2013
-  //width: 100%;
-  //padding-left: 2%;
-  //padding-right: 2%;
   width: 320px;
   height: auto;
   padding-left: 3%;
   padding-right: 3%;
-  @include at-breakpoint($M) {
-    width: 300px;
+  @include at-breakpoint($L) {
+    width: 340px;
     padding-left: 0;
     padding-right: 0;
   }
