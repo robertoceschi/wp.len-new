@@ -34,7 +34,7 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                     <div class="image_text">
                         <?php
                         //check if single-post has a image-gallery or a Slideshow
-                        if (strpos($post->post_content,'[gallery') === false and get_field( "slideshow" ) == '' ){
+                        if (strpos($post->post_content,'[gallery') === false and get_field( "slideshow" ) === false ){
                          ?>
                             <?php the_post_thumbnail('homepage-thumb_big'); ?>
                             <p class="post_text">
@@ -42,7 +42,7 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                                 <?php the_field('post'); ?>
                             </p>
 
-                            <?php } elseif(strpos($post->post_content,'[gallery') === false and get_field( "slideshow" ) != '' ) {;?>
+                            <?php } elseif(strpos($post->post_content,'[gallery') === false and get_field( "slideshow" ) === true ){;?>
                             <?php
                             //zeige Slideshow und Texte
                             the_content();?>
