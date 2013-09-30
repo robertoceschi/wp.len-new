@@ -1524,7 +1524,7 @@ body.active nav[role='navigation'] aside#categories ul li.cat-item a {
 #site-content {
   min-height: 700px;
   width: auto;
-  margin: 5% auto;
+  margin: 3% auto;
 }
 /* line 441, ../sass/partials/_modules.scss */
 #site-content a {
@@ -1546,19 +1546,18 @@ body.active nav[role='navigation'] aside#categories ul li.cat-item a {
 }
 
 /* line 466, ../sass/partials/_modules.scss */
-.featured {
-  width: 620px;
-}
-
-/* line 470, ../sass/partials/_modules.scss */
 .item img {
   width: 320px;
   height: auto;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 @media (min-width: 47em) {
-  /* line 470, ../sass/partials/_modules.scss */
+  /* line 466, ../sass/partials/_modules.scss */
   .item img {
     width: 300px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 

@@ -435,7 +435,7 @@ body.active {
 #site-content {
   min-height: 700px;
   width: auto;
-  margin: 5% auto;
+  margin: 3% auto;
   article {
   }
   a {
@@ -463,21 +463,21 @@ body.active {
 
 }
 
-.featured {
-  width: 620px;
-}
-
 .item img {
   //mobile first passt so! Do-Abend 19.9.2013
   //width: 100%;
   //padding-left: 2%;
   //padding-right: 2%;
   width: 320px;
+  height: auto;
+  padding-left: 3%;
+  padding-right: 3%;
   @include at-breakpoint($M) {
     width: 300px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
-  height: auto;
 
 }
 

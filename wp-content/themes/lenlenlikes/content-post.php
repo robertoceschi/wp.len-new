@@ -66,7 +66,6 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                 </div>
 
 
-
             <footer class="entry-meta">
                 <div class="postinfo-wrap">
                     <span class="share-btn"><span
