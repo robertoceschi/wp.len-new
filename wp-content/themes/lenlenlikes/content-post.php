@@ -11,18 +11,16 @@
 
 get_header(); ?>
 
-<?php
-/*
-$content_post = get_post($my_postid);
-$content = $content_post->post_content;
-if (strpos($content,'orbit') !== false) {
-    echo 'no slideshow';
 
-}elseif (strpos($content,'orbit') === false) {
- echo 'slideshow';
-}
-*/
+
+
+<?php
+
 if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+
+
+
 
     <div id="page_post_content">
         <!--Start Page/Post Content-->
@@ -35,21 +33,29 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <div class="entry-content">
                     <div class="image_text">
                         <?php
-                        //check if single-post has a image-gallery
-                        //if no show Thumbnail
-                        if (strpos($post->post_content,'[gallery') === false){
+                        //check if single-post has a image-gallery or a Slideshow
+                        if (strpos($post->post_content,'[gallery') === false and get_field( "slideshow" ) == '' ){
                          ?>
-                            <a href="<?php the_permalink(); ?>" class="thumb"><?php the_post_thumbnail('homepage-thumb_big'); ?></a>
+                            <?php the_post_thumbnail('homepage-thumb_big'); ?>
                             <p class="post_text">
-                                <?php the_content(); ?>
+                                <?php the_field('text_before'); ?>
+                                <?php the_field('post'); ?>
                             </p>
 
-                        <?php }else{ ?>
+                            <?php } elseif(strpos($post->post_content,'[gallery') === false and get_field( "slideshow" ) != '' ) {;?>
+                            <?php
+                            //zeige Slideshow und Texte
+                            the_content();?>
                             <p class="post_text">
-                                <?php the_content(); ?>
-                            </p>
-                        <?php }
-                        ?>
+                                <?php the_field('text_before');
+                                      the_field('post');?></p>
+                           <?php }
+                            else{
+                                //falls Gallery vorhanden zeige nur die Gallery
+                                ?>
+                                    <?php the_content(); ?>
+                            <?php }
+                            ?>
                     </div>
                 </div>
 
