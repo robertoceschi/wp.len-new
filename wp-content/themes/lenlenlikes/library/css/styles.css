@@ -1552,16 +1552,22 @@ body.active nav[role='navigation'] aside#categories ul li.cat-item a {
 
 /* line 470, ../sass/partials/_modules.scss */
 .item img {
-  width: 300px;
+  width: 320px;
   height: auto;
 }
+@media (min-width: 47em) {
+  /* line 470, ../sass/partials/_modules.scss */
+  .item img {
+    width: 300px;
+  }
+}
 
-/* line 482, ../sass/partials/_modules.scss */
+/* line 484, ../sass/partials/_modules.scss */
 div.overlay {
   position: relative;
 }
 @media (min-width: 80em) {
-  /* line 482, ../sass/partials/_modules.scss */
+  /* line 484, ../sass/partials/_modules.scss */
   div.overlay {
     position: absolute;
     top: 0;
@@ -1578,7 +1584,7 @@ div.overlay {
     transition: opacity 0.2s linear;
     -webkit-backface-visibility: hidden;
   }
-  /* line 499, ../sass/partials/_modules.scss */
+  /* line 501, ../sass/partials/_modules.scss */
   div.overlay:hover {
     opacity: 1;
     filter: alpha(opacity=100);
@@ -1586,7 +1592,7 @@ div.overlay {
   }
 }
 
-/* line 508, ../sass/partials/_modules.scss */
+/* line 510, ../sass/partials/_modules.scss */
 div.overlay header.entry-header {
   position: absolute;
   top: 10px;
@@ -1597,7 +1603,7 @@ div.overlay header.entry-header {
   max-width: 88%;
 }
 @media (min-width: 80em) {
-  /* line 508, ../sass/partials/_modules.scss */
+  /* line 510, ../sass/partials/_modules.scss */
   div.overlay header.entry-header {
     position: relative;
     padding: 10px 10px 22px;
@@ -1607,7 +1613,7 @@ div.overlay header.entry-header {
     left: 0;
   }
 }
-/* line 527, ../sass/partials/_modules.scss */
+/* line 529, ../sass/partials/_modules.scss */
 div.overlay h2.entry-title a {
   color: black;
   font-family: "jubilat";
@@ -1617,12 +1623,12 @@ div.overlay h2.entry-title a {
   word-wrap: break-word;
   letter-spacing: 1px;
 }
-/* line 535, ../sass/partials/_modules.scss */
+/* line 537, ../sass/partials/_modules.scss */
 div.overlay h2.entry-title a:hover {
   color: #1abc9c;
 }
 @media (min-width: 80em) {
-  /* line 540, ../sass/partials/_modules.scss */
+  /* line 542, ../sass/partials/_modules.scss */
   div.overlay h2.entry-title a {
     color: white;
     font-family: "jubilat";
@@ -1632,33 +1638,33 @@ div.overlay h2.entry-title a:hover {
     word-wrap: break-word;
     letter-spacing: 1px;
   }
-  /* line 548, ../sass/partials/_modules.scss */
+  /* line 550, ../sass/partials/_modules.scss */
   div.overlay h2.entry-title a:hover {
     color: #1abc9c;
   }
 }
-/* line 555, ../sass/partials/_modules.scss */
+/* line 557, ../sass/partials/_modules.scss */
 div.overlay span.entry-meta a {
   display: none;
 }
 @media (min-width: 80em) {
-  /* line 559, ../sass/partials/_modules.scss */
+  /* line 561, ../sass/partials/_modules.scss */
   div.overlay span.entry-meta a {
     display: inline;
     color: #a8a8a8;
     font-size: 0.8rem;
   }
-  /* line 563, ../sass/partials/_modules.scss */
+  /* line 565, ../sass/partials/_modules.scss */
   div.overlay span.entry-meta a:hover {
     color: white;
   }
 }
-/* line 569, ../sass/partials/_modules.scss */
+/* line 571, ../sass/partials/_modules.scss */
 div.overlay a.icon-eye {
   display: none;
 }
 @media (min-width: 80em) {
-  /* line 569, ../sass/partials/_modules.scss */
+  /* line 571, ../sass/partials/_modules.scss */
   div.overlay a.icon-eye {
     color: #a8a8a8;
     display: block;
@@ -1667,18 +1673,18 @@ div.overlay a.icon-eye {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
     width: 20px;
   }
-  /* line 578, ../sass/partials/_modules.scss */
+  /* line 580, ../sass/partials/_modules.scss */
   div.overlay a.icon-eye:hover {
     color: white;
   }
 }
 
-/* line 586, ../sass/partials/_modules.scss */
+/* line 588, ../sass/partials/_modules.scss */
 div.thumb-wrap {
   line-height: 0;
 }
 
-/* line 598, ../sass/partials/_modules.scss */
+/* line 600, ../sass/partials/_modules.scss */
 [data-icon]:before {
   font-family: 'icomoon';
   content: attr(data-icon);
@@ -1690,28 +1696,28 @@ div.thumb-wrap {
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 610, ../sass/partials/_modules.scss */
+/* line 612, ../sass/partials/_modules.scss */
 span.icon-heart {
   color: white;
   display: none;
 }
 
-/* line 617, ../sass/partials/_modules.scss */
+/* line 619, ../sass/partials/_modules.scss */
 .icon-arrow-down-alt1 {
   font-size: 3.5em;
   color: white;
 }
-/* line 620, ../sass/partials/_modules.scss */
+/* line 622, ../sass/partials/_modules.scss */
 .icon-arrow-down-alt1:hover {
   color: #a8a8a8;
 }
 
-/* line 626, ../sass/partials/_modules.scss */
+/* line 628, ../sass/partials/_modules.scss */
 #hidden_image {
   display: none;
 }
 
-/* line 632, ../sass/partials/_modules.scss */
+/* line 634, ../sass/partials/_modules.scss */
 #contact-form-20 {
   margin: 0;
   padding: 20px 10px;
@@ -1719,13 +1725,13 @@ span.icon-heart {
   text-align: left;
 }
 
-/* line 641, ../sass/partials/_modules.scss */
+/* line 643, ../sass/partials/_modules.scss */
 .grunion-field-label {
   font-size: 0.8125rem;
   color: #a8a8a8;
 }
 
-/* line 644, ../sass/partials/_modules.scss */
+/* line 646, ../sass/partials/_modules.scss */
 .contact-form input[type='text'] {
   display: block;
   width: 97%;
@@ -1743,7 +1749,7 @@ span.icon-heart {
   outline-style: none;
 }
 
-/* line 661, ../sass/partials/_modules.scss */
+/* line 663, ../sass/partials/_modules.scss */
 .contact-form input[type='email'] {
   display: block;
   width: 97%;
@@ -1761,7 +1767,7 @@ span.icon-heart {
   outline-style: none;
 }
 
-/* line 678, ../sass/partials/_modules.scss */
+/* line 680, ../sass/partials/_modules.scss */
 .contact-form textarea {
   margin: 5px 0 0;
   padding: 8px 1%;
@@ -1778,7 +1784,7 @@ span.icon-heart {
   vertical-align: top;
 }
 
-/* line 695, ../sass/partials/_modules.scss */
+/* line 697, ../sass/partials/_modules.scss */
 .contact-form input[type='submit'] {
   background: #1abc9c;
   width: 99%;
@@ -1801,23 +1807,23 @@ span.icon-heart {
   -o-transition: all 0.18s ease-in-out;
   transition: all 0.18s ease-in-out;
 }
-/* line 716, ../sass/partials/_modules.scss */
+/* line 718, ../sass/partials/_modules.scss */
 .contact-form input[type='submit']:hover {
   background: #1edbb6;
 }
 
-/* line 722, ../sass/partials/_modules.scss */
+/* line 724, ../sass/partials/_modules.scss */
 .contact-form input[type='submit'] :hover {
   background: #1edbb6;
 }
 
-/* line 727, ../sass/partials/_modules.scss */
+/* line 729, ../sass/partials/_modules.scss */
 .contact-form div {
   float: none;
   width: 100%;
 }
 @media (min-width: 47em) {
-  /* line 727, ../sass/partials/_modules.scss */
+  /* line 729, ../sass/partials/_modules.scss */
   .contact-form div {
     float: left;
     width: 31.3%;
@@ -1825,23 +1831,23 @@ span.icon-heart {
   }
 }
 
-/* line 737, ../sass/partials/_modules.scss */
+/* line 739, ../sass/partials/_modules.scss */
 .contact-form div:last-of-type {
   width: 122%;
 }
 
-/* line 746, ../sass/partials/_modules.scss */
+/* line 748, ../sass/partials/_modules.scss */
 body.search-no-results #site-content {
   text-align: center;
 }
 @media (min-width: 47em) {
-  /* line 746, ../sass/partials/_modules.scss */
+  /* line 748, ../sass/partials/_modules.scss */
   body.search-no-results #site-content {
     padding-left: 0;
     padding-right: 0;
   }
 }
-/* line 757, ../sass/partials/_modules.scss */
+/* line 759, ../sass/partials/_modules.scss */
 body.search-no-results #site-content article.search_none form.form-wrapper {
   width: 200px;
   padding: 0 15px 0 15px;
@@ -1851,18 +1857,18 @@ body.search-no-results #site-content article.search_none form.form-wrapper {
   border-radius: 10px;
 }
 @media (min-width: 35em) {
-  /* line 757, ../sass/partials/_modules.scss */
+  /* line 759, ../sass/partials/_modules.scss */
   body.search-no-results #site-content article.search_none form.form-wrapper {
     width: 310px;
   }
 }
 @media (min-width: 47em) {
-  /* line 757, ../sass/partials/_modules.scss */
+  /* line 759, ../sass/partials/_modules.scss */
   body.search-no-results #site-content article.search_none form.form-wrapper {
     width: 310px;
   }
 }
-/* line 773, ../sass/partials/_modules.scss */
+/* line 775, ../sass/partials/_modules.scss */
 body.search-no-results #site-content article.search_none input {
   font-family: "proxima-nova";
   width: 100px;
@@ -1875,43 +1881,43 @@ body.search-no-results #site-content article.search_none input {
   letter-spacing: 1px;
 }
 @media (min-width: 35em) {
-  /* line 773, ../sass/partials/_modules.scss */
+  /* line 775, ../sass/partials/_modules.scss */
   body.search-no-results #site-content article.search_none input {
     width: 170px;
     font-size: 15px;
   }
 }
 @media (min-width: 47em) {
-  /* line 773, ../sass/partials/_modules.scss */
+  /* line 775, ../sass/partials/_modules.scss */
   body.search-no-results #site-content article.search_none input {
     width: 170px;
     font-size: 15px;
   }
 }
-/* line 793, ../sass/partials/_modules.scss */
+/* line 795, ../sass/partials/_modules.scss */
 body.search-no-results #site-content article.search_none .form-wrapper input:focus {
   outline: 0;
   color: #999;
 }
-/* line 797, ../sass/partials/_modules.scss */
+/* line 799, ../sass/partials/_modules.scss */
 body.search-no-results #site-content article.search_none .form-wrapper input::-webkit-input-placeholder {
   color: #999;
   font-weight: normal;
   font-style: italic;
 }
-/* line 802, ../sass/partials/_modules.scss */
+/* line 804, ../sass/partials/_modules.scss */
 body.search-no-results #site-content article.search_none .form-wrapper input:-moz-placeholder {
   color: #999;
   font-weight: normal;
   font-style: italic;
 }
-/* line 808, ../sass/partials/_modules.scss */
+/* line 810, ../sass/partials/_modules.scss */
 body.search-no-results #site-content article.search_none .form-wrapper input:-ms-input-placeholder {
   color: #999;
   font-weight: normal;
   font-style: italic;
 }
-/* line 814, ../sass/partials/_modules.scss */
+/* line 816, ../sass/partials/_modules.scss */
 body.search-no-results #site-content article.search_none button {
   font-family: proxima-nova;
   overflow: visible;
@@ -1930,34 +1936,34 @@ body.search-no-results #site-content article.search_none button {
   letter-spacing: 1px;
 }
 @media (min-width: 35em) {
-  /* line 814, ../sass/partials/_modules.scss */
+  /* line 816, ../sass/partials/_modules.scss */
   body.search-no-results #site-content article.search_none button {
     width: 110px;
     font-size: 14px;
   }
 }
 @media (min-width: 47em) {
-  /* line 814, ../sass/partials/_modules.scss */
+  /* line 816, ../sass/partials/_modules.scss */
   body.search-no-results #site-content article.search_none button {
     font-size: 16px;
   }
 }
-/* line 837, ../sass/partials/_modules.scss */
+/* line 839, ../sass/partials/_modules.scss */
 body.search-no-results #site-content article.search_none button:hover {
   background: #1edbb6;
 }
-/* line 840, ../sass/partials/_modules.scss */
+/* line 842, ../sass/partials/_modules.scss */
 body.search-no-results #site-content article.search_none button:active {
   background: #1abc9c;
   outline: 0;
 }
-/* line 844, ../sass/partials/_modules.scss */
+/* line 846, ../sass/partials/_modules.scss */
 body.search-no-results #site-content article.search_none button:focus {
   background: #1abc9c;
   outline: 0;
 }
 
-/* line 857, ../sass/partials/_modules.scss */
+/* line 859, ../sass/partials/_modules.scss */
 body.search-no-results #site-content .form-wrapper button:before {
   /* left arrow */
   content: '';
@@ -1968,15 +1974,15 @@ body.search-no-results #site-content .form-wrapper button:before {
   top: 12px;
   left: -6px;
 }
-/* line 868, ../sass/partials/_modules.scss */
+/* line 870, ../sass/partials/_modules.scss */
 body.search-no-results #site-content .form-wrapper button:hover:before {
   border-right-color: #1edbb6;
 }
-/* line 873, ../sass/partials/_modules.scss */
+/* line 875, ../sass/partials/_modules.scss */
 body.search-no-results #site-content .form-wrapper button:hover:before {
   border-right-color: #1edbb6;
 }
-/* line 877, ../sass/partials/_modules.scss */
+/* line 879, ../sass/partials/_modules.scss */
 body.search-no-results #site-content .form-wrapper button:active:before {
   border-right-color: #1abc9c;
 }

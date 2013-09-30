@@ -472,11 +472,13 @@ body.active {
   //width: 100%;
   //padding-left: 2%;
   //padding-right: 2%;
-  width: 300px;
-  height: auto;
-  @include at-breakpoint($L) {
-
+  width: 320px;
+  @include at-breakpoint($M) {
+    width: 300px;
   }
+
+  height: auto;
+
 }
 
 div.overlay {
