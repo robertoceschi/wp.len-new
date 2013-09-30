@@ -127,17 +127,20 @@ $XXL: 100em;
         font-size: 0.6875em;
         @include at-breakpoint($M) {
         font-size: 0.9em;
-        line-height: 1.8; }
+        line-height: 1.8;
+     }
       }
       p.post_text_sub {
         text-align: left;
         line-height: 1.4;
-        font-size: 0.6875em;
+        font-size: 0.75em;
         font-style: italic;
         color: $color14;
+        margin-bottom: -10px;
         @include at-breakpoint($M) {
-          font-size: 0.9em;
-          line-height: 1.5; }
+          font-size: 1em;
+          line-height: 1.5;
+          }
       }
     }
   }
@@ -551,12 +554,12 @@ ul.monthly-archive-list {
 
 #page_post_content {
   div.entry-content {
-    div.image_text {
-      a {
+    div.gallery {
+
         img {
           border: 5px solid $color11;
         }
-      }
+
     }
   }
 }

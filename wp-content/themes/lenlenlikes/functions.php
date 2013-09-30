@@ -89,6 +89,7 @@ font-weight: bold;">Shortcuts für Gallerie und Slideshows:</h3>';
 
 
 
+
 /**
  * Custom Post Type About Me
  *
