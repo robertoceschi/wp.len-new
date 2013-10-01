@@ -70,18 +70,13 @@ jQuery(document).ready(function ($) {
     jQuery("#main_image p").fitText(3, { minFontSize: '18px', maxFontSize: '40px' });
 
 
-
     // Initialize Masonry
-
-
-    var $container = jQuery('#site-content');
-
-    $container.masonry({
-
-        // set columnWidth to a percentage of container width
-        masonry: {  columnWidth: $container.querySelector('.grid-sizer') },
+    $('#site-content').masonry({
+        columnWidth: 343,
         itemSelector: '.item',
         isFitWidth: true,
         isAnimated: !Modernizr.csstransitions
+    }).imagesLoaded(function () {
+            jQuery('#site-content').masonry('reload');
     });
 });

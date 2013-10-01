@@ -32,7 +32,6 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
 
         <div id="go_posts"></div>
         <div id="site-content">
-            <div class="grid-sizer"></div>
 
             <?php
             $linksPosts = new WP_Query( 'posts_per_page=20' );
