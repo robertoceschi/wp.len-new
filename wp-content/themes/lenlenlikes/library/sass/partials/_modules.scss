@@ -432,13 +432,19 @@ body.active {
 
 
 
+
 #site-content {
   min-height: 700px;
   width: auto;
+  @include at-breakpoint($ML) {
+    //background-color: green;
+    //width: 1024px!important;
+  }
+
   @include at-breakpoint($L) {
     //width: 1440px!important;
-    margin: 2%;
-    margin-left: 1.8%;
+    //margin: 2%;
+    //margin-left: 1.8%;
   }
 
   article {
@@ -451,6 +457,9 @@ body.active {
 
 .item {
   width: 300px;
+  @include at-breakpoint($ML) {
+
+  }
   @include at-breakpoint($L) {
     width: 340px;
     margin-top: 20px;
@@ -471,10 +480,13 @@ body.active {
 .item img {
   width: 320px;
   height: auto;
-  padding-left: 3%;
-  padding-right: 3%;
+  //padding-left: 3%;
+  //padding-right: 3%;
+  @include at-breakpoint($ML) {
+    background-color: green;
+  }
   @include at-breakpoint($L) {
-    width: 340px;
+    //width: 440px;
     padding-left: 0;
     padding-right: 0;
   }

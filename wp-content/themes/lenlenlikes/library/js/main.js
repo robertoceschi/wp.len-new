@@ -70,13 +70,18 @@ jQuery(document).ready(function ($) {
     jQuery("#main_image p").fitText(3, { minFontSize: '18px', maxFontSize: '40px' });
 
 
+
     // Initialize Masonry
-    $('#site-content').masonry({
-        columnWidth: 350,
+
+
+    var $container = jQuery('#site-content');
+
+    $container.masonry({
+
+        // set columnWidth to a percentage of container width
+        masonry: { columnWidth: $container.width() / 12 },
         itemSelector: '.item',
         isFitWidth: true,
         isAnimated: !Modernizr.csstransitions
-    }).imagesLoaded(function () {
-            jQuery('#site-content').masonry('reload');
-        });
+    });
 });
