@@ -75,7 +75,7 @@ function len_len_theme_setup() {
     //changing standart Thumb-Size for Masonry
     add_image_size('homepage-thumb', 360, auto); // Soft Crop Mode
     add_image_size('homepage-thumb_big', 1000, auto); // Soft Crop Mode
-    add_image_size('orbit-custom', 1000, 600); // Soft Crop Mode
+    add_image_size('orbit-custom', 1000, 600); // Orbit Slideshow
 
 }
 

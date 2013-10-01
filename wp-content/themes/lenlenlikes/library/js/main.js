@@ -20,6 +20,9 @@ jQuery(window).resize(function () {
 });
 jQuery(document).ready(function ($) {
 
+
+
+
    /* var slideshowWrapper = (jQuery('.slideshow-wrapper'));
 
     //checkt ob Slideshow (.slideshow-wrapper) in single-post vorhanden ist, wenn ja wird featured-image versteckt

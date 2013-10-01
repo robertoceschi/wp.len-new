@@ -43,6 +43,7 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                             <p class="post_text">
                                 <?php the_field('post'); ?>
                             </p>
+                            <p><?php the_field('soundcloud');?></p>
 
                             <?php } elseif(strpos($post->post_content,'[gallery') === false and get_field( "slideshow" ) === true ){;?>
                             <?php
@@ -52,14 +53,16 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                                 <?php the_field('text_before');?>
                             </p>
                             <p class="post_text">
-                                  <?php the_field('post');?></p>
+                                  <?php the_field('post');?>
+                                  </p>
+                            <p><?php the_field('soundcloud');?></p>
+
                            <?php }
                             else{
                                 //falls Gallery vorhanden zeige nur die Gallery
                                 ?>
                                 <p class="post_text">
-                                    <?php the_content(); ?>
-                                </p>
+                                 <?php the_content(); ?>
                             <?php }
                             ?>
                     </div>
@@ -97,7 +100,12 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
     // no posts found
 <?php endif; ?>
 
+<script>
 
+
+
+
+</script>
 
 
 

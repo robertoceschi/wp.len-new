@@ -118,6 +118,10 @@ $XXL: 100em;
         img {
           max-width: 100%;
           height: auto;
+        &:hover {
+          background-color: red;
+
+        }
         }
       }
       p.post_text {
@@ -558,12 +562,15 @@ ul.monthly-archive-list {
 
         img {
           border: 5px solid $color11;
+          &:hover {
+
+
+          }
         }
 
     }
   }
 }
-
 .wp-caption-text {
   font-size: 0.9em;
 }

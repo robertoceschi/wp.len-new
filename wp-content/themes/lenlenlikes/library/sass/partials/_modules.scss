@@ -43,11 +43,9 @@ header[role='banner'] {
     width: 68%;
     min-height: 50px;
     margin-left: 31%;
-    padding-top: 17px;
     z-index: 100000;
     h1.main-link-headline {
-      margin: 2% 2% 0 0;
-      padding-bottom: 5px;
+      margin: 20px 2% 0 0;
       font-family: $header_font;
       font-size: 1em;
       font-weight: normal;
@@ -389,7 +387,7 @@ body.active {
   }
   @include at-breakpoint($L) {
     //margin-top: -1em;
-    min-height: 700px;
+    min-height: 780px;
     background-size: cover !important;
     //margin-top: -25px;
   }
@@ -408,9 +406,10 @@ body.active {
     font-family: $body_font;
   }
   a {
-    display: none;
+    visibility: hidden;
     @include at-breakpoint($L) {
       display: block;
+      visibility:visible;
       border-bottom: none;
       margin-top: 80px;
     }
@@ -433,7 +432,7 @@ body.active {
 
 #site-content {
   max-width: 82em; /* 1280px px */
-  margin: 3% auto;
+  margin: 3.5% auto;
   }
 #list {
   width: 103.125%; /* 990px */
