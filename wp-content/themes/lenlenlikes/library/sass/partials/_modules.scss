@@ -458,6 +458,10 @@ body.active {
   }
 }
 @media only screen and (max-width: 40em) /* 640px */ {
+  #site-content {
+    margin-top: 2%;
+  }
+
   .item {
     width: 46.876%; /* 305px */
     margin-bottom: 0.938em; /* 15px */
@@ -469,10 +473,6 @@ body.active {
 }
 
 @media only screen and (max-width: 20em) /* 640px */ {
-  #site-content {
-    margin-top: 2%;
-  }
-
   #list {
     width: 100%;
     margin-left: 0;
@@ -487,6 +487,8 @@ body.active {
     padding-right: 2%;
   }
 }
+
+
 
 div.overlay {
   position: relative;
