@@ -71,12 +71,19 @@ jQuery(document).ready(function ($) {
 
 
     // Initialize Masonry
-    $('#site-content').masonry({
-        columnWidth: 343,
-        itemSelector: '.item',
-        isFitWidth: true,
-        isAnimated: !Modernizr.csstransitions
-    }).imagesLoaded(function () {
-            jQuery('#site-content').masonry('reload');
+    jQuery( window ).load( function()
+    {
+        var columns    = 3,
+            setColumns = function() { columns = jQuery( window ).width() > 640 ? 3 : jQuery( window ).width() > 320 ? 2 : 1; };
+
+        setColumns();
+        jQuery( window ).resize( setColumns );
+
+        jQuery( '#list' ).masonry(
+            {
+                itemSelector: '.item',
+                columnWidth:  function( containerWidth ) { return containerWidth / columns; }
+            });
     });
+
 });

@@ -432,60 +432,54 @@ body.active {
 
 
 #site-content {
-  min-height: 700px;
-  width: auto;
-  @include at-breakpoint($ML) {
-    background-color: green;
+  max-width: 82em; /* 960 px */
+  margin: 0 auto;
+
   }
 
-  @include at-breakpoint($L) {
-    //width: 1440px!important;
-    margin: 2% auto;
-    //margin-left: 1.8%;
-  }
-
-  article {
-  }
-  a {
-    border-bottom: none;
-  }
+#list {
+  width: 103.125%; /* 990px */
+  overflow: hidden;
+  margin-left: -1.562%; /* 15px */
+  margin-bottom: -1.875em; /* 30px */
 }
 
 
 .item {
-  width: 300px;
-  @include at-breakpoint($L) {
-    width: 340px;
-    margin-top: 20px;
-
-  }
-  display: block;
+  width: 30.303%; /* 300px */
   float: left;
-  height: auto;
-  margin-top: 20px;
-  -webkit-transition: left .4s ease-in-out, top .4s ease-in-out .4s;
-  -moz-transition: left .4s ease-in-out, top .4s ease-in-out .4s;
-  -ms-transition: left .4s ease-in-out, top .4s ease-in-out .4s;
-  -o-transition: left .4s ease-in-out, top .4s ease-in-out .4s;
-  transition: left .4s ease-in-out, top .4s ease-in-out .4s;
+  margin: 0 1.515% 1.875em; /* 15px 30px */
+  background-color: green;
+
+
+
 
 }
 
 .item img {
-  width: 320px;
-  height: auto;
-  padding-left: 3%;
-  padding-right: 3%;
-  @include at-breakpoint($ML) {
-    background-color: green;
-  }
-  @include at-breakpoint($L) {
-    width: 340px;
-    padding-left: 0;
-    padding-right: 0;
-  }
+ width: 100%;
+}
 
 
+@media only screen and (max-width: 40em) /* 640px */
+{
+  .item {
+    width: 46.876%; /* 305px */
+    margin-bottom: 0.938em; /* 15px */
+  }
+}
+
+@media only screen and (max-width: 20em) /* 640px */
+{
+  #list {
+    width: 100%;
+    margin-left: 0;
+  }
+  .item {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 div.overlay {

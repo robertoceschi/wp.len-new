@@ -38,6 +38,7 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
             ?>
             <?php while ($linksPosts->have_posts()) :
                 $linksPosts->the_post(); ?>
+                <div id="list">
                 <article id="post-<?php the_ID(); ?> " class="item">
                     <div class="overlay">
                         <header class="entry-header">
@@ -55,6 +56,7 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                         <a href="<?php the_permalink(); ?>" class="thumb"><?php the_post_thumbnail('homepage-thumb'); ?></a>
                     </div>
                 </article> <?php endwhile; ?>
+                </div>
         </div>
 
 
