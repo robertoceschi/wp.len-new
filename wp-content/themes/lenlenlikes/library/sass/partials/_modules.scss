@@ -431,20 +431,18 @@ body.active {
 //masonry
 
 
-
-
 #site-content {
-  min-height: 700px;
-  width: auto;
+
   @include at-breakpoint($ML) {
     //background-color: green;
     //width: 1024px!important;
   }
 
   @include at-breakpoint($L) {
-    //width: 1440px!important;
-    //margin: 2%;
-    //margin-left: 1.8%;
+    width: 80%;
+    /* width of container is 80% of window */
+    margin: 0 auto;
+
   }
 
   article {
@@ -456,19 +454,25 @@ body.active {
 
 
 .item {
-  width: 300px;
+  //width: 300px;
   @include at-breakpoint($ML) {
 
   }
   @include at-breakpoint($L) {
-    width: 340px;
-    margin-top: 20px;
+    .grid-sizer {
+      width: 25%;
+      /* width of 1 column (25% of container) */
+    }
+    .item {
+      width: 25%;
+      /* how many columns should each item fill */
+    }
 
   }
   display: block;
   float: left;
   height: auto;
-  margin-top: 20px;
+  //margin-top: 20px;
   -webkit-transition: left .4s ease-in-out, top .4s ease-in-out .4s;
   -moz-transition: left .4s ease-in-out, top .4s ease-in-out .4s;
   -ms-transition: left .4s ease-in-out, top .4s ease-in-out .4s;
@@ -478,17 +482,19 @@ body.active {
 }
 
 .item img {
-  width: 320px;
-  height: auto;
+ // width: 320px;
+ // height: auto;
   //padding-left: 3%;
   //padding-right: 3%;
   @include at-breakpoint($ML) {
-    background-color: green;
+
+
+
+      /* how many columns should each item fill */
+
   }
   @include at-breakpoint($L) {
-    //width: 440px;
-    padding-left: 0;
-    padding-right: 0;
+    width: 80%;
   }
 
 

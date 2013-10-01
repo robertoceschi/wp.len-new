@@ -79,7 +79,7 @@ jQuery(document).ready(function ($) {
     $container.masonry({
 
         // set columnWidth to a percentage of container width
-        masonry: { columnWidth: $container.width() / 12 },
+        masonry: {  columnWidth: $container.querySelector('.grid-sizer') },
         itemSelector: '.item',
         isFitWidth: true,
         isAnimated: !Modernizr.csstransitions
