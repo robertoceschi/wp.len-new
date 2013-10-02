@@ -45,7 +45,7 @@ header[role='banner'] {
     margin-left: 31%;
     z-index: 100000;
     h1.main-link-headline {
-      margin: 20px 2% 0 0;
+      margin: 18px 2% 0 0;
       font-family: $header_font;
       font-size: 1em;
       font-weight: normal;
@@ -432,7 +432,7 @@ body.active {
 
 #site-content {
   max-width: 82em; /* 1280px px */
-  margin: 3.5% auto;
+  margin: 3.8% auto;
   }
 #list {
   width: 103.125%; /* 990px */
@@ -451,6 +451,10 @@ body.active {
 }
 
 @media only screen and (max-width: 80em) /* 640px */ {
+  #site-content {
+    margin: 1.1% auto;
+  }
+
   .item img {
     padding-left: 3%;
     padding-right: 3%;
@@ -458,7 +462,7 @@ body.active {
 }
 @media only screen and (max-width: 40em) /* 640px */ {
   #site-content {
-    margin-top: 2%;
+    margin-top: 1.5%;
   }
 
   .item {
@@ -472,6 +476,9 @@ body.active {
 }
 
 @media only screen and (max-width: 20em) /* 640px */ {
+  #site-content {
+    margin-top: 2.2%;
+  }
   #list {
     width: 100%;
     margin-left: 0;
@@ -517,9 +524,10 @@ div.overlay {
 div.overlay {
   header.entry-header {
     position: absolute;
-    top: 10px;
-    left: 3%;
-    padding: 1px 3% 6px;
+    //top: 10px;
+    //left: 3%;
+
+    padding: 1px 5% 6px;
     background: rgba(255, 255, 255, 0.7);
     display: inline-block;
     max-width: 88%;

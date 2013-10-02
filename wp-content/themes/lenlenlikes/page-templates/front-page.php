@@ -58,14 +58,4 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                 </article> <?php endwhile; ?>
                 </div>
         </div>
-
-
-<script>
-    jQuery(document).ready(function(){
-
-
-    });
-</script>
-
-
 <?php get_footer(); ?>

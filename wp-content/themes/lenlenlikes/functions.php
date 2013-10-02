@@ -33,6 +33,8 @@ function len_len_theme_css_js()
 
     // Adds JavaScript for Fittext
     wp_enqueue_script('fittext', get_template_directory_uri() . '/library/js/fittext.js', array('jquery'), '1.1');
+
+
 }
 
 
@@ -201,4 +203,3 @@ function SearchFilter($query) {
     return $query;
 }
 add_filter('pre_get_posts','SearchFilter');
-

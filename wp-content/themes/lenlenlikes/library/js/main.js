@@ -74,19 +74,23 @@ jQuery(document).ready(function ($) {
 
 
     // Initialize Masonry
-    jQuery( window ).load( function()
-    {
-        var columns    = 3,
-            setColumns = function() { columns = jQuery( window ).width() > 640 ? 3 : jQuery( window ).width() > 320 ? 2 : 1; };
+    jQuery(window).load(function () {
+        var columns = 3,
+            setColumns = function () {
+                columns = jQuery(window).width() > 640 ? 3 : jQuery(window).width() > 320 ? 2 : 1;
+            };
 
         setColumns();
-        jQuery( window ).resize( setColumns );
+        jQuery(window).resize(setColumns);
 
-        jQuery( '#list' ).masonry(
+        jQuery('#list').masonry(
             {
                 itemSelector: '.item',
-                columnWidth:  function( containerWidth ) { return containerWidth / columns; }
+                columnWidth: function (containerWidth) {
+                    return containerWidth / columns;
+                }
             });
-    });
 
+
+    });
 });
