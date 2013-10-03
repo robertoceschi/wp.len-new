@@ -31,6 +31,13 @@ while ($loop->have_posts()) : $loop->the_post();
                     </p>
                     <p class="post_text">
                         <?php the_field('maintext'); ?>
+                        <br><br>
+                        <?php $url = get_field('url_link');
+                        if ($url != '') {
+                            echo  '<a href="http://www.'. $url .'" target="_blank" class="post_link">' . $url . '</a>';
+                        }else {
+                        }
+                        ?>
                     </p>
                 </div>
             </div>

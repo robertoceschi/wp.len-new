@@ -146,6 +146,13 @@ $XXL: 100em;
           line-height: 1.5;
           }
       }
+       .post_link {
+        text-align: left;
+        color:$color14;
+        &:hover {
+          color: $color10;
+        }
+      }
     }
   }
   footer.entry-meta {

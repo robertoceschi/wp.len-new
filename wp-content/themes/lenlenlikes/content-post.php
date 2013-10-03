@@ -41,8 +41,16 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                                 <?php the_field('text_before'); ?>
                             </p>
                             <p class="post_text">
-                                <?php the_field('post'); ?>
+                                <?php the_field('post');?>
+                               <br><br>
+                            <?php $url = get_field('link');
+                            if ($url != '') {
+                                echo  '<a href="http://www.'. $url .'" target="_blank" class="post_link">' . $url . '</a>';
+                            }else {
+                            }
+                            ?>
                             </p>
+
                             <p><?php the_field('soundcloud');?></p>
 
                             <?php } elseif(strpos($post->post_content,'[gallery') === false and get_field( "slideshow" ) === true ){;?>
@@ -50,11 +58,18 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                             //zeige Slideshow und Texte
                             the_content();?>
                             <p class="post_text_sub">
-                                <?php the_field('text_before');?>
+                                <?php echo the_field('text_before');?>
                             </p>
                             <p class="post_text">
                                   <?php the_field('post');?>
                                   </p>
+                            <?php
+                            $url = get_field('link');
+                            if ($url != '') {
+                                echo  '<a href="http://www.'.$url.'" target="_blank" class="post_link">' . $url . '</a>';
+                            }else {
+                            }
+                            ?>
                             <p><?php the_field('soundcloud');?></p>
 
                            <?php }

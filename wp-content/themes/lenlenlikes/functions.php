@@ -85,7 +85,7 @@ function len_len_theme_setup() {
 add_action( 'edit_form_after_title', 'myprefix_edit_form_after_title' );
 function myprefix_edit_form_after_title() {
     echo '<h3 style="font-family: sans-serif; padding: 7px 0; color: rgb(51, 51, 51); font-size: 13px;
-font-weight: bold;">Shortcuts für Gallerie und Slideshows:</h3>';
+font-weight: bold;">Shortcuts für Gallerie und Slideshows:</h3><p>Bsp:[orbit-slider category="maputo_classics" size="large" ]</p>';
 }
 
 
