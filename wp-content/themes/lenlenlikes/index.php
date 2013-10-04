@@ -1,6 +1,6 @@
 <?php
 /**
- * The main template file. =>Default Template im Backend
+ * The main template file. =>blog page => die letzen Post werden angezeigt
  *
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
@@ -11,30 +11,28 @@
  *
  */
 
-get_header(); ?>
-<?php
-
-if (have_posts()) : while (have_posts()) : the_post(); ?>
+get_header();?>
 
 
 
-    <!--Start Main Content-->
-    <div id="site-content">
-        <div class="entry-header">
-            <h1 class="entry-title"><?php the_title(); ?></h1>
-        </div>
-        <!-- end .entry-header -->
 
-        <div class="entry-content ">
-            <?php the_content(); ?>
-        </div>
-        <!-- end .entry-content -->
+<div id="go_posts"></div>
+<div id="site-content">
+    <div id="list">
+
+        <?php if (have_posts()) : ?>
+
+            <?php /* The loop */ ?>
+            <?php while (have_posts()) : the_post(); ?>
+                <?php get_template_part('content', get_post_format()); ?>
+            <?php endwhile; ?>
+
+
+        <?php else : ?>
+        <?php endif; ?>
+
     </div>
-    <!--End Main Content-->
 
-<?php endwhile; else: ?>
-    // no posts found
-<?php endif; ?>
+</div>
 
-
-<?php get_footer(); ?>
+<?php get_footer();?>

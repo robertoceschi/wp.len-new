@@ -602,6 +602,7 @@ body.home div.overlay {
 
 }
 
+
 body.archive div.overlay {
   header.entry-header {
     position: absolute;
@@ -683,7 +684,86 @@ body.archive div.overlay {
 
 }
 
+body.blog div.overlay {
+  header.entry-header {
+    position: absolute;
+    padding: 0 3% 0;
+    background: rgba(255, 255, 255, 0.7);
+    display: inline-block;
+    max-width: 88%;
+    @include at-breakpoint($L) {
+      position: absolute;
+      padding: 1% 1% 0;
+      //padding: 10px 10px 22px;
+      //background: none;
+      //display: block;
+      //top: 0;
+      //left: 0;
+    }
+  }
 
+
+  h2.entry-title {
+    margin:0;
+    margin-bottom: 4px;
+    a {
+      color: $color10;
+      font-family: "jubilat";
+      font-weight: normal;
+      line-height: 1.4;
+      font-size: 0.5em;
+      word-wrap: break-word;
+      letter-spacing: 1px;
+      &:hover {
+        color: $color13
+      }
+    }
+    @include at-breakpoint($L) {
+      a {
+        color: $color10;
+        font-family: "jubilat";
+        font-size: 1em;
+        font-weight: normal;
+        line-height: 1.4;
+        word-wrap: break-word;
+        letter-spacing: 1px;
+        &:hover {
+          color: $color13
+        }
+      }
+    }
+  }
+  span.entry-meta {
+    a {
+      display: none;
+    }
+    @include at-breakpoint($L) {
+      a {
+        display: inline;
+        color: $color10;
+        font-size: 0.8rem;
+        &:hover {
+          color: $color13;
+        }
+      }
+    }
+  }
+  a.icon-eye {
+    display: none;
+    @include at-breakpoint($L) {
+      color: $color10;
+      display: block;
+      opacity: 0.6;
+      filter: alpha(opacity=60);
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+      width: 20px;
+      &:hover {
+        color: $color13;
+      }
+    }
+  }
+
+}
 
 div.thumb-wrap {
     line-height: 0;
