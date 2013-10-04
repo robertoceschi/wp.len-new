@@ -17,7 +17,6 @@
                     ;?>
 
             </aside>
-
             <aside id="sociallinks"><h3 class="one"><span>FIND ME ONE</span></h3>
                 <ul class="sociallinks">
                     <li><a href="http://www.facebook.com/elmastudio" class="facebook" title="Facebook"
