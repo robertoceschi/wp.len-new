@@ -86,15 +86,19 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
 
             <footer class="entry-meta">
                 <div class="postinfo-wrap">
-                    <span class="share-btn"><span
-                            aria-hidden="true" data-icon="&#xe009;" class="hi-icon icon-share"></span>Share this</span>
+
+
+
                     <div class="category">
                     <span>CATEGORY</span><?php the_category(' ') ;?>
                     </div>
                     <div class="tags">
                         <span>TAGS</span><?php the_tags(' ');  ?>
                     </div>
-                </div>
+
+                </div> <span class="share-btn">
+                      <?php echo sharing_display();?></span>
+
             </footer>
         </article>
 

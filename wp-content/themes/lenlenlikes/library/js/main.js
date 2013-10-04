@@ -85,6 +85,13 @@ jQuery(document).ready(function ($) {
 
         jQuery('#list').masonry(
             {
+                isAnimated: true,
+                animationOptions: {
+                    duration: 500,
+                    easing: 'linear',
+                    queue: false
+                },
+                isAnimated: !Modernizr.csstransitions,
                 itemSelector: '.item',
                 columnWidth: function (containerWidth) {
                     return containerWidth / columns;

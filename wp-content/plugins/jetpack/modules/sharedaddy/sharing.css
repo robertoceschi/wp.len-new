@@ -326,8 +326,9 @@ li.share-print a.sd-button > span {
 	background-image: url('images/print.png');
 }
 
+
 a.sd-button.share-more span {
-	background-image: url('images/more.png');
+	background-image: url('images/share.png');
 }
 
 @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 120dpi) {

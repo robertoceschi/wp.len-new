@@ -161,27 +161,13 @@ $XXL: 100em;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     div.postinfo-wrap {
       span.share-btn {
-        float: right;
-          display: block;
-          //max-width: 30%;
-          float: right;
-          padding: 0 0 4px 25px;
-          margin-bottom: 0;
-          font-size: 0.6em;
-          color: $color14;
-          font-weight: bold;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          display:inline-block;
-          border:none;
-          outline:0;
-          cursor:pointer;
+
         &:hover {
-          color:$color10
+
         }
 
         span.icon-share {
-          padding-right: 7px;
+
         }
 
       }
