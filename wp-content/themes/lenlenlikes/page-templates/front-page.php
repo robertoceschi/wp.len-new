@@ -32,12 +32,12 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
 
         <div id="go_posts"></div>
         <div id="site-content">
+    <div id="list">
             <?php
             $linksPosts = new WP_Query( 'posts_per_page=20' );
             ?>
             <?php while ($linksPosts->have_posts()) :
                 $linksPosts->the_post(); ?>
                 <?php get_template_part('content', get_post_format()); ?> <?php endwhile; ?>
-                </div>
-
+                </div> </div>
 <?php get_footer(); ?>
