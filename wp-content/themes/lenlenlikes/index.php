@@ -16,22 +16,33 @@ get_header();?>
 
 
 
-<div id="go_posts"></div>
-<div id="site-content">
-    <div id="list">
+    <div id="go_posts"></div>
+    <div id="site-content">
+        <div id="list">
+            <?php
 
-        <?php if (have_posts()) : ?>
+            $temp = $wp_query; $wp_query= null;
+            $wp_query = new WP_Query(); $wp_query->query('showposts=5' . '&paged='.$paged);
+            ?>
+            <?php while ($wp_query->have_posts()) :
+                $wp_query->the_post(); ?>
+                <?php get_template_part('content', get_post_format()); ?> <?php endwhile; ?>
 
-            <?php /* The loop */ ?>
-            <?php while (have_posts()) : the_post(); ?>
-                <?php get_template_part('content', get_post_format()); ?>
-            <?php endwhile; ?>
+        </div> </div>
+<?php if ($paged > 1) { ?>
 
+    <nav id="nav-posts">
+        <div class="prev"><?php next_posts_link('&laquo; Previous Posts'); ?></div>
+        <div class="next"><?php previous_posts_link('Newer Posts &raquo;'); ?></div>
+    </nav>
 
-        <?php else : ?>
-        <?php endif; ?>
+<?php } else { ?>
 
-    </div>
+    <nav id="nav-posts">
+        <div class="prev"><?php next_posts_link('&laquo; Previous Posts'); ?></div>
+    </nav>
 
-</div>
+<?php } ?>
+
+<?php wp_reset_postdata(); ?>
 <?php get_footer();?>
