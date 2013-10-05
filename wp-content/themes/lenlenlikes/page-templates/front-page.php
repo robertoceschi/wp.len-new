@@ -34,10 +34,19 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
         <div id="site-content">
     <div id="list">
             <?php
-            $linksPosts = new WP_Query( 'posts_per_page=20' );
+            $linksPosts = new WP_Query( 'posts_per_page=30' );
             ?>
             <?php while ($linksPosts->have_posts()) :
                 $linksPosts->the_post(); ?>
                 <?php get_template_part('content', get_post_format()); ?> <?php endwhile; ?>
                 </div> </div>
+
+    <span class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'aquaponicfamily' ) . '</span> %title' ); ?></span>
+    <span class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'aquaponicfamily' ) . '</span>' ); ?></span>
+    </nav><!-- .nav-single -->
+
+
+
+
+
 <?php get_footer(); ?>
