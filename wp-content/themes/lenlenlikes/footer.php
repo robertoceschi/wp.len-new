@@ -4,7 +4,7 @@
         <!--End Fluid Container-->
 
         <div id="footer">
-            2013 Len-Len Likes
+            © <?php echo date('Y') ;?> LEN-LEN LIKES
         </div>
 
 <?php wp_footer(); ?>

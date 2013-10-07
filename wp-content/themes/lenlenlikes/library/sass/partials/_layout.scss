@@ -35,6 +35,7 @@ $S: 35em;
 // roughly speaking, around 370px wide with 16px body font
 $M: 47em;
 // roughly speaking, around 750px wide with 16px body font (tablets portrait)
+$ML: 64em;
 $L: 80em;
 // roughly speaking, around 1200px wide with 16px body font (tablets landscape) (smaller laptops)
 $XL: 90em;
@@ -114,14 +115,9 @@ $XXL: 100em;
 #footer {
   clear:left;
   //border-top: 1px solid $color13;
-  background:rgba(25, 25, 25, 0.8);
+  background:$color11;
   text-align:center;
   padding:10px;
   color: black;
 }
-
-
-
-
-
 

@@ -1,40 +1,47 @@
 <?php
-    /**
-     * The main template file. =>Default Template im Backend
-     *
-     * This is the most generic template file in a WordPress theme
-     * and one of the two required files for a theme (the other being style.css).
-     * It is used to display a page when nothing more specific matches a query.
-     * For example, it puts together the home page when no home.php file exists.
-     *
-     * Learn more: http://codex.wordpress.org/Template_Hierarchy
-     *
-     */
+/**
+ * The main template file. =>blog page => die letzen Post werden angezeigt
+ *
+ * This is the most generic template file in a WordPress theme
+ * and one of the two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query.
+ * For example, it puts together the home page when no home.php file exists.
+ *
+ * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ *
+ */
 
-get_header(); ?>
-<?php
-
-if (have_posts()) : while (have_posts()) : the_post(); ?>
+get_header();?>
 
 
 
-    <!--Start Main Content-->
+
+    <div id="go_posts"></div>
     <div id="site-content">
-        <div class="entry-header">
-            <h1 class="entry-title"><?php the_title(); ?></h1>
-        </div>
-        <!-- end .entry-header -->
+        <div id="list">
+            <?php
+            $temp = $wp_query; $wp_query= null;
+            $wp_query = new WP_Query(); $wp_query->query('showposts=5' . '&paged='.$paged);
+            ?>
+            <?php while ($wp_query->have_posts()) :
+                $wp_query->the_post(); ?>
+                <?php get_template_part('content', get_post_format()); ?> <?php endwhile; ?>
 
-        <div class="entry-content ">
-            <?php the_content(); ?>
-        </div>
-        <!-- end .entry-content -->
-    </div>
-    <!--End Main Content-->
+        </div> </div>
+<?php if ($paged > 1) { ?>
 
-<?php endwhile; else: ?>
-    // no posts found
-<?php endif; ?>
+    <nav id="nav-posts">
+        <div class="prev"><?php next_posts_link(' '); ?></div>
+        <div class="next"><?php previous_posts_link(''); ?></div>
+    </nav>
 
+<?php } else { ?>
 
-<?php get_footer(); ?>
+    <nav id="nav-posts">
+        <div class="prev"><?php next_posts_link(''); ?></div>
+    </nav>
+
+<?php } ?>
+
+<?php wp_reset_postdata(); ?>
+<?php get_footer();?>

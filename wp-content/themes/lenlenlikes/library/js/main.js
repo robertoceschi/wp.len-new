@@ -59,12 +59,53 @@ jQuery(document).ready(function ($) {
 
 
     // Initialize Masonry
-    $('#site-content').masonry({
-        columnWidth: 320,
-        itemSelector: '.item',
-        isFitWidth: true,
-        isAnimated: !Modernizr.csstransitions
-    }).imagesLoaded(function () {
-            jQuery('#site-content').masonry('reload');
-        });
+    jQuery(window).imagesLoaded(function () {
+        var columns = 3,
+            setColumns = function () {
+                columns = jQuery(window).width() > 640 ? 3 : jQuery(window).width() > 320 ? 2 : 1;
+            };
+
+        setColumns();
+        jQuery(window).resize(setColumns);
+
+        var $container = jQuery('#list');
+
+        $container.masonry(
+            {
+                isAnimated: true,
+                animationOptions: {
+                    duration: 500,
+                    easing: 'linear',
+                    queue: false
+                },
+                isAnimated: !Modernizr.csstransitions,
+                itemSelector: '.item',
+                columnWidth: function (containerWidth) {
+                    return containerWidth / columns;
+                }
+            });
+
+        $container.infinitescroll({
+                navSelector  : '#nav-posts',    // selector for the paged navigation
+                nextSelector : '#nav-posts .prev a',  // selector for the NEXT link (to page 2)
+                itemSelector : '.item',     // selector for all items you'll retrieve
+                loading: {
+                    finishedMsg: 'No more pages to load.',
+                    img: 'http://i.imgur.com/6RMhx.gif'
+                }
+            },
+            // trigger Masonry as a callback
+            function( newElements ) {
+                // hide new items while they are loading
+                var $newElems = jQuery( newElements ).css({ opacity: 0 });
+                // ensure that images load before adding to masonry layout
+                $newElems.imagesLoaded(function(){
+                    // show elems now they're ready
+                    $newElems.animate({ opacity: 1 });
+                    $container.masonry( 'appended', $newElems, true );
+                });
+            }
+        );
+    });
 });
+

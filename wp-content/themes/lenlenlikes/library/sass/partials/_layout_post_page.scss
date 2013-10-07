@@ -118,6 +118,10 @@ $XXL: 100em;
         img {
           max-width: 100%;
           height: auto;
+        &:hover {
+          background-color: red;
+
+        }
         }
       }
       p.post_text {
@@ -127,17 +131,27 @@ $XXL: 100em;
         font-size: 0.6875em;
         @include at-breakpoint($M) {
         font-size: 0.9em;
-        line-height: 1.8; }
+        line-height: 1.8;
+     }
       }
       p.post_text_sub {
         text-align: left;
         line-height: 1.4;
-        font-size: 0.6875em;
+        font-size: 0.75em;
         font-style: italic;
         color: $color14;
+        margin-bottom: -10px;
         @include at-breakpoint($M) {
-          font-size: 0.9em;
-          line-height: 1.5; }
+          font-size: 1em;
+          line-height: 1.5;
+          }
+      }
+       .post_link {
+        text-align: left;
+        color:$color14;
+        &:hover {
+          color: $color10;
+        }
       }
     }
   }
@@ -147,27 +161,13 @@ $XXL: 100em;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     div.postinfo-wrap {
       span.share-btn {
-        float: right;
-          display: block;
-          //max-width: 30%;
-          float: right;
-          padding: 0 0 4px 25px;
-          margin-bottom: 0;
-          font-size: 0.6em;
-          color: $color14;
-          font-weight: bold;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          display:inline-block;
-          border:none;
-          outline:0;
-          cursor:pointer;
+
         &:hover {
-          color:$color10
+
         }
 
         span.icon-share {
-          padding-right: 7px;
+
         }
 
       }
@@ -551,16 +551,19 @@ ul.monthly-archive-list {
 
 #page_post_content {
   div.entry-content {
-    div.image_text {
-      a {
+    div.gallery {
+
         img {
           border: 5px solid $color11;
+          &:hover {
+
+
+          }
         }
-      }
+
     }
   }
 }
-
 .wp-caption-text {
   font-size: 0.9em;
 }

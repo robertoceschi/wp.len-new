@@ -30,40 +30,41 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
     // no posts found
 <?php endif; ?>
 
-        <div id="go_posts"></div>
-        <div id="site-content">
-
+    <div id="go_posts"></div>
+    <div id="site-content">
+        <div id="list">
             <?php
-            $linksPosts = new WP_Query( 'posts_per_page=20' );
+            $paged = ( get_query_var( 'page' ) ) ? get_query_var( 'page' ) : 1;
+            $the_query = new WP_Query( 'posts_per_page=15&paged=' . $paged );
             ?>
-            <?php while ($linksPosts->have_posts()) :
-                $linksPosts->the_post(); ?>
-                <article id="post-<?php the_ID(); ?> " class="item">
-                    <div class="overlay">
-                        <header class="entry-header">
-                            <h2 class="entry-title"><a href="<?php the_permalink(); ?>" title=""
-                                                       rel="bookmark"><?php the_title(); ?></a></h2>
-                            <span class="entry-meta"><a href="<?php the_permalink(); ?>"><?php echo get_the_date(
-                                ); ?> / </a> <?php comments_popup_link(); ?></span>
-                            <a href="<?php the_permalink(); ?>" class="icon-eye" title="icon-eye" target="_blank"><span aria-hidden="true"
-                                                                                                   data-icon="&#xe00a;"
-                                                                                                   class="icon-eye"></span></a>
-                        </header>
-                    </div>
-                    <!--Link zum Post -->
-                    <div class="thumb-wrap">
-                        <a href="<?php the_permalink(); ?>" class="thumb"><?php the_post_thumbnail('homepage-thumb'); ?></a>
-                    </div>
-                </article> <?php endwhile; ?>
+            <?php while ( $the_query->have_posts() ) :
+                $the_query->the_post(); ?>
+                <?php get_template_part( 'content', get_post_format() ); ?> <?php endwhile; ?>
+
         </div>
 
 
-<script>
-    jQuery(document).ready(function(){
+    </div>
+
+<?php if ( $paged > 1 ) { ?>
+
+    <nav id="nav-posts">
+        <div class="prev"><?php next_posts_link( '', $the_query->max_num_pages ); ?></div>
+        <div class="next"><?php previous_posts_link( '' ); ?></div>
+    </nav>
+
+<?php } else { ?>
+
+    <nav id="nav-posts">
+        <div class="prev"><?php next_posts_link( '', $the_query->max_num_pages ); ?></div>
+    </nav>
+
+<?php } ?>
+
+<?php wp_reset_postdata(); ?>
 
 
-    });
-</script>
+
 
 
 <?php get_footer(); ?>

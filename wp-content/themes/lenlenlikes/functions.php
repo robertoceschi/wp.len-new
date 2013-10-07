@@ -33,6 +33,13 @@ function len_len_theme_css_js()
 
     // Adds JavaScript for Fittext
     wp_enqueue_script('fittext', get_template_directory_uri() . '/library/js/fittext.js', array('jquery'), '1.1');
+
+
+    // Adds JavaScript for Fittext
+    wp_enqueue_script('infinite_scroll', get_template_directory_uri() . '/library/js/jquery.infinitescroll.min.js', array('jquery'), '1.1');
+
+
+
 }
 
 
@@ -75,7 +82,19 @@ function len_len_theme_setup() {
     //changing standart Thumb-Size for Masonry
     add_image_size('homepage-thumb', 360, auto); // Soft Crop Mode
     add_image_size('homepage-thumb_big', 1000, auto); // Soft Crop Mode
+    add_image_size('orbit-custom', 1000, 600); // Orbit Slideshow
+
 }
+
+//Styling Title "Shortcuts für Gallerie und Slideshows" in Admin
+add_action( 'edit_form_after_title', 'myprefix_edit_form_after_title' );
+function myprefix_edit_form_after_title() {
+    echo '<h3 style="font-family: sans-serif; padding: 7px 0; color: rgb(51, 51, 51); font-size: 13px;
+font-weight: bold;">Shortcuts für Gallerie und Slideshows:</h3><p>[orbit-slider category="maputo_classics" size="large" ]</p>';
+}
+
+
+
 
 
 /**
@@ -189,3 +208,4 @@ function SearchFilter($query) {
     return $query;
 }
 add_filter('pre_get_posts','SearchFilter');
+
