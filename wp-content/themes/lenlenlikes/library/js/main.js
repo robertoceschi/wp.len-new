@@ -35,6 +35,7 @@ jQuery(document).ready(function ($) {
     });
 
 
+
     // Hauptbild auf der Home-Site wird als CSS-Background-Image ausgegeben
     var image_src = jQuery("#hidden_image img").attr('src');
     jQuery("#main_image").css("background-image", "url(" + image_src + ")");
