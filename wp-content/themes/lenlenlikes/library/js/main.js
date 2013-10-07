@@ -90,8 +90,8 @@ jQuery(document).ready(function ($) {
                 nextSelector : '#nav-posts .prev a',  // selector for the NEXT link (to page 2)
                 itemSelector : '.item',     // selector for all items you'll retrieve
                 loading: {
-                    //finishedMsg: 'No more pages to load.',
-                    //img: 'http://i.imgur.com/6RMhx.gif'
+                    finishedMsg: 'No more pages to load.',
+                    img: 'http://i.imgur.com/6RMhx.gif'
                 }
             },
             // trigger Masonry as a callback

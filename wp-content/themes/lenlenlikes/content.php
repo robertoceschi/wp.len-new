@@ -1,10 +1,6 @@
 <?php
-
-//Single Post
-
+//Anzeige Excerpt (Titel, Datum, Thumbnail) der Posts auf der Front-Page
 ?>
-
-
 <article id="post-<?php the_ID(); ?> " class="item">
     <div class="overlay">
         <header class="entry-header">
@@ -13,7 +9,6 @@
                             <span class="entry-meta"><a href="<?php the_permalink(); ?>"><?php echo get_the_date(); ?>
                                     / </a> <?php comments_popup_link(); ?></span>
             <a href="<?php the_permalink(); ?>" class="icon-eye" title="icon-eye" target="_blank"><span aria-hidden="true"
-                                                                                                        data-icon="&#xe00a;"
                                                                                                         class="icon-eye"></span></a>
         </header>
     </div>

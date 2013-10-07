@@ -42,24 +42,26 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <?php get_template_part( 'content', get_post_format() ); ?> <?php endwhile; ?>
 
         </div>
-        <?php if ( $paged > 1 ) { ?>
 
-        <nav id="nav-posts">
-            <div class="prev"><?php next_posts_link( '', $the_query->max_num_pages ); ?></div>
-            <div class="next"><?php previous_posts_link( '' ); ?></div>
-        </nav>
-
-        <?php } else { ?>
-
-            <nav id="nav-posts">
-                <div class="prev"><?php next_posts_link( '', $the_query->max_num_pages ); ?></div>
-            </nav>
-
-        <?php } ?>
-
-        <?php wp_reset_postdata(); ?>
 
     </div>
+
+<?php if ( $paged > 1 ) { ?>
+
+    <nav id="nav-posts">
+        <div class="prev"><?php next_posts_link( '', $the_query->max_num_pages ); ?></div>
+        <div class="next"><?php previous_posts_link( '' ); ?></div>
+    </nav>
+
+<?php } else { ?>
+
+    <nav id="nav-posts">
+        <div class="prev"><?php next_posts_link( '', $the_query->max_num_pages ); ?></div>
+    </nav>
+
+<?php } ?>
+
+<?php wp_reset_postdata(); ?>
 
 
 
