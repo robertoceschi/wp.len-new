@@ -586,7 +586,8 @@ body.home div.overlay {
     }
     }
     a.icon-eye {
-      display: none;
+      display: block;
+      //display: none;
       @include at-breakpoint($L) {
       color: $color14;
       display: block;

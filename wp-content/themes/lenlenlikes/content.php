@@ -13,7 +13,7 @@
                             <span class="entry-meta"><a href="<?php the_permalink(); ?>"><?php echo get_the_date(); ?>
                                     / </a> <?php comments_popup_link(); ?></span>
             <a href="<?php the_permalink(); ?>" class="icon-eye" title="icon-eye" target="_blank"><span
-                    aria-hidden="true"huhuhu
+                    aria-hidden="true"
         </header>
     </div>
     <!--Link zum Post -->
