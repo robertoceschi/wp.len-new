@@ -1,11 +1,8 @@
 <?php
 
-
-
-
+//Single Post
 
 ?>
-
 
 
 <article id="post-<?php the_ID(); ?> " class="item">
@@ -16,7 +13,7 @@
                             <span class="entry-meta"><a href="<?php the_permalink(); ?>"><?php echo get_the_date(); ?>
                                     / </a> <?php comments_popup_link(); ?></span>
             <a href="<?php the_permalink(); ?>" class="icon-eye" title="icon-eye" target="_blank"><span
-                    aria-hidden="true"
+                    aria-hidden="true"huhuhu
         </header>
     </div>
     <!--Link zum Post -->

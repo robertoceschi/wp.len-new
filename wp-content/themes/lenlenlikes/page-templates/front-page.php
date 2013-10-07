@@ -35,7 +35,7 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
         <div id="list">
             <?php
             $paged = ( get_query_var( 'page' ) ) ? get_query_var( 'page' ) : 1;
-            $the_query = new WP_Query( 'posts_per_page=10&paged=' . $paged );
+            $the_query = new WP_Query( 'posts_per_page=15&paged=' . $paged );
             ?>
             <?php while ( $the_query->have_posts() ) :
                 $the_query->the_post(); ?>
