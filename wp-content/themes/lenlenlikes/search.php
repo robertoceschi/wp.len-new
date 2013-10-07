@@ -1,15 +1,5 @@
 <?php
 /**
- * The template for displaying search results.
- *
- * @package Renkon
- * @since   Renkon 1.0
- */
-
-get_header(); ?>
-
-<?php
-/**
  * The template for displaying Search Results pages.
  *
  * @package    WordPress
@@ -29,9 +19,8 @@ get_header(); ?>
 <?php endif; ?>
 
     <!--Start Main Content-->
-<div id="content">
-    <div id="site-content">
 
+    <div id="page_post_content">
 <?php
 
 if ( have_posts() && strlen( trim(get_search_query()) ) != 0 ) : while (have_posts()) : the_post();
@@ -67,7 +56,6 @@ if ( have_posts() && strlen( trim(get_search_query()) ) != 0 ) : while (have_pos
     <?php get_template_part ('content', 'searchform'); ?>
             <?php endif; ?>
     </article>
-
     </div>
 </div>
 
