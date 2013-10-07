@@ -119,13 +119,6 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
     // no posts found
 <?php endif; ?>
 
-<script>
-
-
-
-
-</script>
-
 
 
 

@@ -20,21 +20,6 @@ jQuery(window).resize(function () {
 });
 jQuery(document).ready(function ($) {
 
-
-
-
-   /* var slideshowWrapper = (jQuery('.slideshow-wrapper'));
-
-    //checkt ob Slideshow (.slideshow-wrapper) in single-post vorhanden ist, wenn ja wird featured-image versteckt
-    var name = 'slideshow-wrapper';
-    if (jQuery("." + name).length != 0) {
-        jQuery('.image_text a img').css('display', 'none');
-    }
-
-    //falls Slideshow vorhanden wird sie direkt vor den single-post text gestellt
-    slideshowWrapper.prependTo('.entry-content');*/
-
-
     // "smooth" Link to the posts on Frontpage
     jQuery('a[href="#go_posts"]').on('click', function (e) {
         e.preventDefault();
@@ -74,7 +59,7 @@ jQuery(document).ready(function ($) {
 
 
     // Initialize Masonry
-    jQuery(window).load(function () {
+    jQuery(window).imagesLoaded(function () {
         var columns = 3,
             setColumns = function () {
                 columns = jQuery(window).width() > 640 ? 3 : jQuery(window).width() > 320 ? 2 : 1;
@@ -83,7 +68,9 @@ jQuery(document).ready(function ($) {
         setColumns();
         jQuery(window).resize(setColumns);
 
-        jQuery('#list').masonry(
+        var $container = jQuery('#list');
+
+        $container.masonry(
             {
                 isAnimated: true,
                 animationOptions: {
@@ -98,6 +85,27 @@ jQuery(document).ready(function ($) {
                 }
             });
 
-
+        $container.infinitescroll({
+                navSelector  : '#nav-posts',    // selector for the paged navigation
+                nextSelector : '#nav-posts .prev a',  // selector for the NEXT link (to page 2)
+                itemSelector : '.item',     // selector for all items you'll retrieve
+                loading: {
+                    //finishedMsg: 'No more pages to load.',
+                    //img: 'http://i.imgur.com/6RMhx.gif'
+                }
+            },
+            // trigger Masonry as a callback
+            function( newElements ) {
+                // hide new items while they are loading
+                var $newElems = jQuery( newElements ).css({ opacity: 0 });
+                // ensure that images load before adding to masonry layout
+                $newElems.imagesLoaded(function(){
+                    // show elems now they're ready
+                    $newElems.animate({ opacity: 1 });
+                    $container.masonry( 'appended', $newElems, true );
+                });
+            }
+        );
     });
 });
+

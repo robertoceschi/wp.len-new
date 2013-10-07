@@ -20,7 +20,6 @@ get_header();?>
     <div id="site-content">
         <div id="list">
             <?php
-
             $temp = $wp_query; $wp_query= null;
             $wp_query = new WP_Query(); $wp_query->query('showposts=5' . '&paged='.$paged);
             ?>
