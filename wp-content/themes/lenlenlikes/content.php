@@ -12,8 +12,9 @@
                                        rel="bookmark"><?php the_title(); ?></a></h2>
                             <span class="entry-meta"><a href="<?php the_permalink(); ?>"><?php echo get_the_date(); ?>
                                     / </a> <?php comments_popup_link(); ?></span>
-            <a href="<?php the_permalink(); ?>" class="icon-eye" title="icon-eye" target="_blank"><span
-                    aria-hidden="true"
+            <a href="<?php the_permalink(); ?>" class="icon-eye" title="icon-eye" target="_blank"><span aria-hidden="true"
+                                                                                                        data-icon="&#xe00a;"
+                                                                                                        class="icon-eye"></span></a>
         </header>
     </div>
     <!--Link zum Post -->
