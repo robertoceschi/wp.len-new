@@ -20,6 +20,26 @@ jQuery(window).resize(function () {
 });
 jQuery(document).ready(function ($) {
 
+    //Jetpack Image Gallery custom
+    jQuery(".gallery-icon ").prepend( ' <div class="hover">Click for Gallery</div>' );
+
+    jQuery(function() {
+
+        jQuery(".gallery-icon").hover(
+            function() {
+                jQuery('.attachment-medium',this).fadeTo(200, 0.7).end().children(".hover").show();
+
+            },
+            function() {
+                jQuery('.attachment-medium',this).fadeTo(200, 1).end().children(".hover").hide();
+            });
+    });
+
+    //removing second "sharable" in Image -Gallery
+    jQuery('div.image_text div.sharedaddy').css('display', 'none');
+
+
+
     // "smooth" Link to the posts on Frontpage
     jQuery('a[href="#go_posts"]').on('click', function (e) {
         e.preventDefault();
