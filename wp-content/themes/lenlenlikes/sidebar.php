@@ -19,10 +19,10 @@
             </aside>
             <aside id="sociallinks"><h3 class="one"><span>FIND ME ONE</span></h3>
                 <ul class="sociallinks">
-                    <li><a href="http://www.facebook.com/elmastudio" class="facebook" title="Facebook"
+                    <li><a href="https://www.facebook.com/LenLenLikes" class="facebook" title="Facebook"
                            target="_blank"><span
                             aria-hidden="true" data-icon="&#xe000;" class="hi-icon icon-facebook"></span></a><a
-                            href="http://www.flickr.com/photos/elmastudio" class="twitter" title="Twitter"
+                            href="#" class="twitter" title="Twitter"
                             target="_blank"><span aria-hidden="true" data-icon="&#xe002;"
                                                   class="icon-twitter"></span></a><a
                             href="#" class="instagram" title="Instagram" target="_blank"><span aria-hidden="true"
