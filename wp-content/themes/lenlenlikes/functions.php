@@ -35,7 +35,7 @@ function len_len_theme_css_js()
     wp_enqueue_script('fittext', get_template_directory_uri() . '/library/js/fittext.js', array('jquery'), '1.1');
 
 
-    // Adds JavaScript for Fittext
+    // Adds JavaScript for Infinite Scroll
     wp_enqueue_script('infinite_scroll', get_template_directory_uri() . '/library/js/jquery.infinitescroll.min.js', array('jquery'), '1.1');
 
 }

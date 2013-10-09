@@ -430,56 +430,57 @@ body.active {
 
 //masonry
 
-
+//masonry ab 1280px
 #site-content {
   max-width: 82em; /* 1280px px */
   margin: 3.8% auto;
   min-height: 700px;;
   }
+
 #list {
   width: 103.125%; /* 990px */
   overflow: hidden;
   margin-left: -1.562%; /* 15px */
   margin-bottom: -1.875em; /* 30px */
 }
-.item {
-  width: 30.303%; /* 300px */
-  float: left;
-  margin: 0 1.515% 1.875em; /* 15px 30px */
-}
+
 .item img {
- width: 100%;
+  width: 100%;
   height: auto;
 }
 
-@media only screen and (max-width: 80em) /* 640px */ {
+.item {
+  //width: 30.303%; /* 300px */
+  float: left;
+  margin: 0 1.515% 1.875em; /* 15px 30px */
+}
+
+
+
+
+@media only screen and (max-width: 1440px) /* 641px - 1280px / 2 Bilder sollen angezeigt werden*/ {
   #site-content {
     margin: 1.1% auto;
-  }
-
-  .item img {
-    padding-left: 3%;
-    padding-right: 3%;
-  }
-}
-@media only screen and (max-width: 40em) /* 640px */ {
-  #site-content {
-    margin-top: 1.5%;
+    //background-color: green;
   }
 
   .item {
-    width: 46.876%; /* 305px */
-    margin-bottom: 0.938em; /* 15px */
+    width: 46.7%;
+   // margin-left: 0;
+   // margin-right: 0;
   }
+
   .item img {
     padding-left: 3%;
     padding-right: 3%;
   }
 }
 
-@media only screen and (max-width: 20em) /* 640px */ {
+
+@media only screen and (max-width: 40em) /* bis 640px /1 Bild wird angezeigt */ {
   #site-content {
     margin-top: 2.2%;
+    //background-color: red;
   }
   #list {
     width: 100%;
@@ -495,6 +496,7 @@ body.active {
     padding-right: 2%;
   }
 }
+
 
 
 

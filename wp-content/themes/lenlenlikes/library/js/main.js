@@ -83,7 +83,9 @@ jQuery(document).ready(function ($) {
     jQuery(window).imagesLoaded(function () {
         var columns = 3,
             setColumns = function () {
-                columns = jQuery(window).width() > 640 ? 3 : jQuery(window).width() > 320 ? 2 : 1;
+                columns = jQuery(window).width() > 1280 ? 2 : jQuery(window).width() > 640 ? 2 : jQuery(window).width() > 320 ? 1 : 1;
+
+
             };
 
         setColumns();
