@@ -600,6 +600,15 @@ body.archive div.overlay {
   header.entry-header {
     position: absolute;
     padding: 0 3% 0;
+    margin-left: 3.5%;
+    margin-top: 1.6%;
+    @include at-breakpoint($ML) {
+      margin-left: 4%;
+    margin-top: 4.5%;
+  }
+    @include at-breakpoint($ML) {
+      margin-top: 6%;
+    }
     background: rgba(255, 255, 255, 0.7);
     display: inline-block;
     max-width: 88%;
@@ -766,14 +775,20 @@ body.search div.overlay {
     background: rgba(255, 255, 255, 0.7);
     display: inline-block;
     max-width: 88%;
+    margin-left: 3.5%;
+    margin-top: 1.6%;
+    @include at-breakpoint($ML) {
+      margin-left: 4%;
+      margin-top: 4.5%;
+    }
+    @include at-breakpoint($ML) {
+      margin-top: 6%;
+    }
+
     @include at-breakpoint($L) {
       position: absolute;
       padding: 1% 1% 0;
-      //padding: 10px 10px 22px;
-      //background: none;
-      //display: block;
-      //top: 0;
-      //left: 0;
+
     }
   }
 

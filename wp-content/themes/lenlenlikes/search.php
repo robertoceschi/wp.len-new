@@ -21,6 +21,7 @@ get_header(); ?>
     <!--Start Main Content-->
 
     <div id="page_post_content">
+    <div id="list">
 <?php
 
 if ( have_posts() && strlen( trim(get_search_query()) ) != 0 ) : while (have_posts()) : the_post();
@@ -56,6 +57,7 @@ if ( have_posts() && strlen( trim(get_search_query()) ) != 0 ) : while (have_pos
     <?php get_template_part ('content', 'searchform'); ?>
             <?php endif; ?>
     </article>
+       </div>
     </div>
 </div>
 

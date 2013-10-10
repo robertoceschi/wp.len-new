@@ -34,6 +34,7 @@ get_header(); ?>
 <div id="content" >
 
     <div id="site-content">
+        <div id="list">
 
         <?php
 
@@ -61,6 +62,7 @@ get_header(); ?>
         <?php endwhile; else: ?>
             // no posts found
         <?php endif; ?>
+        </div>
     </div>
 </div>
 

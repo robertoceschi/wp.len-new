@@ -15,7 +15,7 @@
     <!-- Google Chrome Frame for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title><?php bloginfo('name') ?>| <?php bloginfo('description'); ?></title>
+    <title><?php bloginfo('name') ?> <?php bloginfo('description'); ?></title>
 
     <!-- mobile meta (hooray!) -->
     <meta name="HandheldFriendly" content="True">
