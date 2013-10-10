@@ -80,61 +80,72 @@ jQuery(document).ready(function ($) {
 
 
     // Initialize Masonry
-    jQuery(window).imagesLoaded(function () {
-        var columns = 1,
-            setColumns = function () {
-                if (jQuery(window).width() < 767) {
-                    columns = 1
-                } else if (jQuery(window).width() < 1023) {
-                    columns = 2
-                } else if (jQuery(window).width() < 1760) {
-                    columns = 3
-                } else {
-                    columns = 4
-                }
 
+
+    // update columnWidth on window resize
+    var columns = 1,
+        setColumns = function () {
+            if (jQuery(window).width() < 767) {
+                columns = 1
+            } else if (jQuery(window).width() < 1023) {
+                columns = 2
+            } else if (jQuery(window).width() < 1760) {
+                columns = 3
+            } else {
+                columns = 4
             }
+        }
 
-        setColumns();
-        jQuery(window).resize(setColumns);
+    setColumns();
+    jQuery(window).resize(setColumns);
 
-        var $container = jQuery('#list');
 
-        $container.masonry(
-            {
+    //container for the posts (images)
+    var $container = jQuery('#list');
+
+
+    //Detect when images have been loaded.
+    $container.imagesLoaded(function () {
+        //Initialize Masonry
+        $container.masonry({
                 isAnimated: true,
                 animationOptions: {
                     duration: 500,
                     easing: 'linear',
                     queue: false
                 },
+
+                //Animating with CSS Transitions
                 isAnimated: !Modernizr.csstransitions,
                 itemSelector: '.item',
+                resizable: false, // disable normal resizing
                 columnWidth: function (containerWidth) {
                     return containerWidth / columns;
                 }
             });
-
-        $container.infinitescroll({
-                navSelector  : '#nav-posts',    // selector for the paged navigation
-                nextSelector : '#nav-posts .prev a',  // selector for the NEXT link (to page 2)
-                itemSelector : '.item',     // selector for all items you'll retrieve
-                loading: {
-                    finishedMsg: 'No more pages to load.',
-                    img: 'http://i.imgur.com/6RMhx.gif'
-                }
-            },
-            // trigger Masonry as a callback
-            function( newElements ) {
-                // hide new items while they are loading
-                var $newElems = jQuery( newElements ).css({ opacity: 0 });
-                // ensure that images load before adding to masonry layout
-                $newElems.imagesLoaded(function(){
-                    // show elems now they're ready
-                    $newElems.animate({ opacity: 1 });
-                    $container.masonry( 'appended', $newElems, true );
-                });
-            }
-        );
     });
+
+    $container.infinitescroll({
+            navSelector: '#nav-posts',    // selector for the paged navigation
+            nextSelector: '#nav-posts .prev a',  // selector for the NEXT link (to page 2)
+            itemSelector: '.item',     // selector for all items you'll retrieve
+            loading: {
+                msgText: 'Loading...',
+                finishedMsg: 'No more pages to load.',
+                img: ''
+            }
+        },
+
+        // trigger Masonry as a callback
+        function (newElements) {
+            // hide new items while they are loading
+            var $newElems = jQuery(newElements).css({ opacity: 0 });
+            // ensure that images load before adding to masonry layout
+            $newElems.imagesLoaded(function () {
+                // show elems now they're ready
+                $newElems.animate({ opacity: 1 });
+                $container.masonry('appended', $newElems, true);
+            });
+        }
+    );
 });

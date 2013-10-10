@@ -18,19 +18,23 @@ function len_len_theme_css_js()
 
     // Adds Costum JS
     wp_enqueue_script(
-        'len-len-main-js', get_template_directory_uri() . '/library/js/main.js', array('jquery'), '1.0.0', true
+        'len-len-main-js', get_template_directory_uri() . '/library/js/main.js', array('jquery'), '1.0.0'
     );
 
     // Adds JavaScript for Modernizr
     wp_enqueue_script(
-        'modernizr', get_template_directory_uri() . '/library/js/modernizr.2.6.2.min.js', array('jquery'), '2.6.2', true
+        'modernizr', get_template_directory_uri() . '/library/js/modernizr.2.6.2.min.js', array('jquery'), '2.6.2'
     );
 
     // Adds JavaScript for Masonry
     wp_enqueue_script(
-        'masonry', get_template_directory_uri() . '/library/js/jquery.masonry.min.js', array('jquery'), '2.1.08', true
+        'masonry', get_template_directory_uri() . '/library/js/jquery.masonry.min.js', array('jquery'), '2.1.08'
     );
 
+    // Adds JavaScript for Imagesloaded
+    wp_enqueue_script(
+        'imagesloaded', get_template_directory_uri() . '/library/js/imagesloaded.js', array('jquery'), '3.0.2'
+    );
     // Adds JavaScript for Fittext
     wp_enqueue_script('fittext', get_template_directory_uri() . '/library/js/fittext.js', array('jquery'), '1.1');
 
