@@ -206,6 +206,11 @@ $XXL: 100em;
 
 
   .gallery-icon .hover  {
+    font-size: 0.7em;
+    @include at-breakpoint($S) {
+    font-size: 1em;
+
+  }
     color: white;
     background: rgba(25, 25, 25, 0.7);
     display: none;
@@ -215,7 +220,19 @@ $XXL: 100em;
     padding: 5px;
     z-index: 999;
   }
+  
+ 
 
+  .gallery-icon .hover  {
+    color: white;
+    background: rgba(25, 25, 25, 0.7);
+    display: none;
+    position: absolute;
+    right:5px;
+    margin-top: 5px;
+    padding: 5px;
+    z-index: 999;
+  }
 
   //Styling Comments
   div.comments-wrap {
