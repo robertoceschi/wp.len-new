@@ -81,12 +81,21 @@ jQuery(document).ready(function ($) {
 
     // Initialize Masonry
     jQuery(window).imagesLoaded(function () {
-        var columns = 3,
+        var columns = 1,
             setColumns = function () {
-                columns = jQuery(window).width() > 1280 ? 2 : jQuery(window).width() > 640 ? 2 : jQuery(window).width() > 320 ? 1 : 1;
+                //columns = jQuery(window).width() > 1280 ? 2 : jQuery(window).width() > 640 ? 2 : jQuery(window).width() > 320 ? 1 : 1;
+                if (jQuery(window).width() < 767) {
+                    columns = 1
+                } else if (jQuery(window).width() < 1023) {
+                    columns = 2
+                } else if (jQuery(window).width() < 1760) {
+                    columns = 3
+                } else {
+                    columns = 4
+                }
 
-
-            };
+                //columns = jQuery(window).width() < 767 ? 1 : jQuery(window).width() < 1023 ? 2 : jQuery(window).width() < 1760 ? 3 : 4;
+            }
 
         setColumns();
         jQuery(window).resize(setColumns);

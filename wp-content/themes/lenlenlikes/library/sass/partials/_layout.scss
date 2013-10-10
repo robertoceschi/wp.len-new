@@ -33,15 +33,14 @@ $XS: 18em;
 // roughly speaking, around 288px wide with 16px body font
 $S: 35em;
 // roughly speaking, around 370px wide with 16px body font
-$M: 47em;
-// roughly speaking, around 750px wide with 16px body font (tablets portrait)
-$ML: 64em;
+$M: 48em; //767px
+$ML: 64em; //1024px
 $L: 80em;
 // roughly speaking, around 1200px wide with 16px body font (tablets landscape) (smaller laptops)
 $XL: 90em;
 // roughly speaking, around 1400px wide with 16px body font (standard laptops)
-$XXL: 100em;
-// Minimum width of 1800 pixels (bigger desktop screens)
+$XXL: 110em;
+// Minimum width of 160 pixels (bigger desktop screens)
 
 
   .fluid-container {
