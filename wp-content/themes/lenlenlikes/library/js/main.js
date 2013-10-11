@@ -1,3 +1,9 @@
+/*if (jQuery.browser.msie) {
+   // alert('ie');
+    jQuery('.menu_title').css('display', 'none');
+
+}*/
+
 // Make the showSidebar function into a variable so it can be easily called
 var showSidebar = function () {
     var $target = jQuery('body').toggleClass("active");
@@ -80,8 +86,6 @@ jQuery(document).ready(function ($) {
 
 
     // Initialize Masonry
-
-
     // update columnWidth on window resize
     var columns = 1,
         setColumns = function () {
@@ -96,8 +100,8 @@ jQuery(document).ready(function ($) {
             }
         }
 
-    setColumns();
-    jQuery(window).resize(setColumns);
+        setColumns();
+            jQuery(window).resize(setColumns);
 
 
     //container for the posts (images)
@@ -107,7 +111,7 @@ jQuery(document).ready(function ($) {
     //Detect when images have been loaded.
     $container.imagesLoaded(function () {
         //Initialize Masonry
-        $container.masonry({
+         $container.masonry({
                 isAnimated: true,
                 animationOptions: {
                     duration: 500,
@@ -126,13 +130,13 @@ jQuery(document).ready(function ($) {
     });
 
     $container.infinitescroll({
-            navSelector: '#nav-posts',    // selector for the paged navigation
-            nextSelector: '#nav-posts .prev a',  // selector for the NEXT link (to page 2)
-            itemSelector: '.item',     // selector for all items you'll retrieve
-            loading: {
-                msgText: 'Loading...',
-                finishedMsg: 'No more pages to load.',
-                img: ''
+                navSelector: '#nav-posts',    // selector for the paged navigation
+                nextSelector: '#nav-posts .prev a',  // selector for the NEXT link (to page 2)
+                itemSelector: '.item',     // selector for all items you'll retrieve
+                loading: {
+                    msgText: 'Loading...',
+                    finishedMsg: 'No more pages to load.',
+                    img: ''
             }
         },
 

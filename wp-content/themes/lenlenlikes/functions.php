@@ -13,7 +13,7 @@ function len_len_theme_css_js()
     wp_enqueue_style('main', get_template_directory_uri() . '/library/css/styles.css');
 
     //Loads the Typekit JS
-    wp_enqueue_script('theme_typekit', '//use.typekit.net/dtv6mdo.js');
+    wp_enqueue_script('theme_typekit', '//use.typekit.net/wqg5dbg.js');
 
 
     // Adds Costum JS

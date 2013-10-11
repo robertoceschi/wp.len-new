@@ -66,6 +66,16 @@ header[role='banner'] {
   }
 }
 
+//removing "menu" in IE10
+.ie10 .menu_title  {
+    display: none;
+}
+
+.lt-ie9 .menu_title  {
+  display: none;
+}
+
+
 // Off-Canvas  part left
 //
 
@@ -234,9 +244,12 @@ body.active {
     .form-wrapper input {
       font-family: $body_font;
       width: 100px;
+      border-radius:0!important;
+      -webkit-border-radius: 0!important;
       @include at-breakpoint($S) {
         width: 210px;
         font-size: 15px;
+
       }
       @include at-breakpoint($M) {
         width: 310px;
@@ -436,10 +449,14 @@ body.active {
 
   min-height: 700px;
   @include at-breakpoint($M) { //ab 767px
-  // background-color: red;
+
     margin: 1.1% auto;
   }
-  @include at-breakpoint($XL) { //ab 767px
+  @include at-breakpoint($ML) { //ab 1024px
+
+
+  }
+  @include at-breakpoint($XL) { //ab 1400px
     margin-top: 4.4%;
   }
   @include at-breakpoint($XXL) { //ab 1760px

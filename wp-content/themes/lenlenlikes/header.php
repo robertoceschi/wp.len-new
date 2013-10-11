@@ -7,7 +7,14 @@
 <!--[if (IE 8)&!(IEMobile)]>
 <html <?php language_attributes(); ?> class="no-js lt-ie9"><![endif]-->
 <!--[if gt IE 8]><!-->
+<!--[if !IE]><!--><script>
+    if (/*@cc_on!@*/false) {
+        document.documentElement.className+='ie10';
+    }
+</script><!--<![endif]-->
+
 <html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
+
 
 <head>
     <meta charset="utf-8">
