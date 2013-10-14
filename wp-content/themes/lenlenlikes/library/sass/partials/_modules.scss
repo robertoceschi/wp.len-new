@@ -387,9 +387,7 @@ body.active {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover !important;
-  height: auto;
-  min-height: 250px;
-  //margin-top: 3.2em;
+  height: 200px;
   margin-left: auto;
   margin-right: auto;
   padding: 0;
@@ -401,11 +399,9 @@ body.active {
   @include at-breakpoint($L) {
     //margin-top: -1em;
     min-height: 780px;
-    background-size: cover !important;
     //margin-top: -25px;
   }
   @include at-breakpoint($XL) {
-    background-size: cover !important;
     height: 900px;
 
   }
@@ -435,6 +431,32 @@ body.active {
     line-height: 1em;
   }
 }
+
+
+
+@media screen and (width: 480px) {
+  #main_image {
+    height: 260px;
+  }
+}
+@media screen and (width: 568px) {
+  #main_image {
+    height: 355px;
+  }
+  #main_image .headline {
+    margin-top: 26%;
+  }
+}
+@media screen and (width: 600px) {
+  #main_image {
+    height: 320px;
+  }
+}@media screen and (width: 1024px) {
+  #main_image {
+    height: 540px;
+  }
+}
+
 
 .main-content {
   background-color: $color11;
