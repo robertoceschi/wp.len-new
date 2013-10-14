@@ -393,22 +393,11 @@ body.active {
   padding: 0;
   overflow: hidden;
   text-align: center;
-  @include at-breakpoint($M) {
-    min-height: 480px;
-  }
-  @include at-breakpoint($L) {
-    //margin-top: -1em;
-    min-height: 780px;
-    //margin-top: -25px;
-  }
-  @include at-breakpoint($XL) {
-    height: 900px;
 
-  }
 
   .headline {
     color: $color11;
-    margin-top: 32%;
+    margin-top: 21%;
     margin-left: auto;
     margin-right: auto;
     line-height: 1.25;
@@ -433,27 +422,62 @@ body.active {
 }
 
 
-
-@media screen and (width: 480px) {
+//main-image and title and text
+@media screen and (min-width:  500px) {
   #main_image {
-    height: 260px;
+    min-height: 250px;
+  }
+
+}
+
+
+@media screen and (min-width:  640px) {
+  #main_image {
+    min-height: 400px;
+  }
+  #main_image .headline {
+    margin-top: 30%;
   }
 }
-@media screen and (width: 568px) {
+
+
+@media screen and (min-width:  768px) {
   #main_image {
-    height: 355px;
+    min-height: 480px;
   }
   #main_image .headline {
     margin-top: 26%;
   }
 }
-@media screen and (width: 600px) {
+
+@media screen and (min-width: 1024px) {
   #main_image {
-    height: 320px;
+    min-height: 625px;
   }
-}@media screen and (width: 1024px) {
+  #main_image .headline {
+    margin-top: 24%;
+  }
+}
+@media screen and (min-width: 1280px) {
   #main_image {
-    height: 540px;
+    min-height: 900px;
+  }
+  #main_image .headline {
+    margin-top: 29%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  #main_image {
+    min-height: 900px;
+  }
+  #main_image .headline {
+    margin-top: 31%;
+  }
+}
+@media screen and (min-width: 1800px) {
+  #main_image {
+    height:1200px;
+    min-height: 900px;
   }
 }
 

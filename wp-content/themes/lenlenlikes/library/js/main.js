@@ -93,7 +93,7 @@ jQuery(document).ready(function ($) {
                 columns = 1
             } else if (jQuery(window).width() < 1023) {
                 columns = 2
-            } else if (jQuery(window).width() < 1760) {
+            } else if (jQuery(window).width() < 1600) {
                 columns = 3
             } else {
                 columns = 4
