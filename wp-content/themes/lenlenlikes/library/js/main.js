@@ -1,9 +1,3 @@
-/*if (jQuery.browser.msie) {
-   // alert('ie');
-    jQuery('.menu_title').css('display', 'none');
-
-}*/
-
 // Make the showSidebar function into a variable so it can be easily called
 var showSidebar = function () {
     var $target = jQuery('body').toggleClass("active");
@@ -17,6 +11,8 @@ var showSidebar = function () {
         jQuery('nav[role="navigation"]').css('display', 'none');
     }
 };
+
+
 // add/remove classes everytime the window resize event fires
 jQuery(window).resize(function () {
     var off_canvas_nav_display = jQuery('.off-canvas-navigation').css('display');
@@ -25,6 +21,10 @@ jQuery(window).resize(function () {
     }
 });
 jQuery(document).ready(function ($) {
+    //wenn ie-9 wird "menu" titel ausgeblendet
+    if ( jQuery.browser.msie  && parseInt( jQuery.browser.version, 10) === 9) {
+        jQuery('span.menu_title').css('display', 'none');
+    }
 
     //Jetpack Image Gallery custom
     jQuery(".gallery-icon ").prepend( ' <div class="hover">Click for Gallery</div>' );

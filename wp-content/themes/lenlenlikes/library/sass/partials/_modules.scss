@@ -460,7 +460,7 @@ body.active {
 }
 @media screen and (min-width: 1280px) {
   #main_image {
-    min-height: 900px;
+    min-height: 829px;
   }
   #main_image .headline {
     margin-top: 29%;
@@ -499,6 +499,7 @@ body.active {
     margin: 1.1% auto;
   }
   @include at-breakpoint($ML) { //ab 1024px
+    background-color: green;
 
 
   }
