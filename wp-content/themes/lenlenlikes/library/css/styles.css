@@ -1498,7 +1498,7 @@ body.active nav[role='navigation'] aside#categories ul li.cat-item a {
 /* line 413, ../sass/partials/_modules.scss */
 #main_image .headline {
   color: white;
-  margin-top: 20%;
+  margin-top: 32%;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.25;
@@ -1514,7 +1514,7 @@ body.active nav[role='navigation'] aside#categories ul li.cat-item a {
     display: block;
     visibility: visible;
     border-bottom: none;
-    margin-top: 80px;
+    margin-top: -20px;
   }
 }
 /* line 430, ../sass/partials/_modules.scss */
@@ -1522,7 +1522,7 @@ body.active nav[role='navigation'] aside#categories ul li.cat-item a {
   color: white;
   font-style: italic;
   font-family: "jubilat";
-  margin-bottom: -2px;
+  margin-top: -4%;
   line-height: 1em;
 }
 
