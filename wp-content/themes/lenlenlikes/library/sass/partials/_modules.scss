@@ -388,6 +388,7 @@ body.active {
   background-attachment: scroll;
   background-size: cover !important;
   height: 200px;
+  min-height: 200px;
   margin-left: auto;
   margin-right: auto;
   padding: 0;
@@ -499,7 +500,6 @@ body.active {
     margin: 1.1% auto;
   }
   @include at-breakpoint($ML) { //ab 1024px
-    background-color: green;
 
 
   }

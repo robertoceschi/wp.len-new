@@ -91,7 +91,7 @@ jQuery(document).ready(function ($) {
         setColumns = function () {
             if (jQuery(window).width() < 767) {
                 columns = 1
-            } else if (jQuery(window).width() < 1023) {
+            } else if (jQuery(window).width() < 1008) {
                 columns = 2
             } else if (jQuery(window).width() < 1600) {
                 columns = 3
