@@ -383,7 +383,6 @@ body.active {
           a {
             color: $color11;
             border-bottom: none;
-            //padding: 4%;
           }
         }
       }
@@ -392,11 +391,10 @@ body.active {
 }
 
 #main_image {
-  //background-image: image-url('ellen-header.jpg');
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover !important;
-  min-height: 200px;
+  height: 200px;
   margin-left: auto;
   margin-right: auto;
   padding: 0;
@@ -507,7 +505,7 @@ body.active {
 
     margin: 1.1% auto;
   }
-  @include at-breakpoint($ML) { //ab 1024px
+  @include at-breakpoint($L) { //ab 1024px
 
 
   }
