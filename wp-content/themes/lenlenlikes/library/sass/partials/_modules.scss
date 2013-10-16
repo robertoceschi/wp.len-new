@@ -71,10 +71,19 @@ header[role='banner'] {
     display: none;
 }
 
+//IE 8 spezifische Style
 .lt-ie9 .menu_title  {
   display: none;
 }
 
+.lt-ie9 #main_image   {
+  min-height: 900px;
+  margin-left: -10%;
+}
+
+.lt-ie9 #main_image .headline {
+  margin-top: 40%;
+}
 
 // Off-Canvas  part left
 //
@@ -387,7 +396,6 @@ body.active {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover !important;
-  height: 200px;
   min-height: 200px;
   margin-left: auto;
   margin-right: auto;
@@ -828,7 +836,6 @@ body.blog div.overlay {
       }
     }
   }
-
 }
 
 
