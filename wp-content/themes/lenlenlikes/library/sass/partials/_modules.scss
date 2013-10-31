@@ -13,6 +13,7 @@ header[role='banner'] {
     position: fixed;
     z-index: 100000 !important;
     background: rgba(255, 255, 255, 0.7);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#4cffffff', endColorstr='#4cffffff'); /* IE */
   }
   span.sidebar-item {
     min-width: 65px;
@@ -75,6 +76,19 @@ header[role='banner'] {
 .lt-ie9 .menu_title  {
   display: none;
 }
+
+.lt-ie9 .about-text-wrap p {
+  color: white;
+}
+
+.lt-ie9 .about-img-wrap p {
+  color: white;
+}
+
+/*.lt-ie9 div.overlay header.entry-header  {
+  background: white;
+}*/
+
 
 // Off-Canvas  part left
 //
@@ -583,6 +597,7 @@ body.home div.overlay {
 
     padding: 1px 5% 6px;
     background: rgba(255, 255, 255, 0.7);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#4cffffff', endColorstr='#4cffffff'); /* IE */
     display: inline-block;
     max-width: 88%;
     @include at-breakpoint($L) {
@@ -664,13 +679,14 @@ body.archive div.overlay {
     margin-left: 3.5%;
     margin-top: 1.6%;
     @include at-breakpoint($ML) {
-      margin-left: 4%;
+    margin-left: 4%;
     margin-top: 4.5%;
   }
     @include at-breakpoint($ML) {
       margin-top: 6%;
     }
     background: rgba(255, 255, 255, 0.7);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#4cffffff', endColorstr='#4cffffff'); /* IE */
     display: inline-block;
     max-width: 88%;
     @include at-breakpoint($L) {

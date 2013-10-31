@@ -30,6 +30,10 @@ get_header(); ?>
             ?>
             <h1 class="entry-title"><?php _e(' "', 'lenlenlikes');
                 the_time('F Y'); ?>"</h1>
+        <?php }elseif (is_author()) {
+            ?>
+            <h1 class="entry-title"><?php _e('Posted by  "', 'lenlenlikes');
+                the_author(); ?>"</h1>
         <?php }; ?>
     </div>
 
