@@ -11,7 +11,6 @@ get_header(); ?>
 if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 
-
     <!--Start Main Content-->
     <div id="site-content">
         <div class="entry-header">
@@ -29,6 +28,5 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
 <?php endwhile; else: ?>
     // no posts found
 <?php endif; ?>
-
 
 <?php get_footer(); ?>
